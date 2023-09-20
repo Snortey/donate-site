@@ -51,7 +51,7 @@ const Profileimage = () => {
                 <Link to={'/signin'} className='linksign'> SignIn</Link>
                 <FaArrowRightLong className="arrow-icon"/>
             </Link>
-          </div>
+      </div>
     )
 }
 
