@@ -1,0 +1,57 @@
+
+.carousel_wrapper {
+    display: flex;
+    width: 732px;
+    position: relative;
+    height: 528px;
+    gap: 24px;
+    overflow: hidden; 
+}
+
+.carousel_card {
+    width: 50px;
+    height: 500px; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 24px;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    transition: all 700ms ease;
+    cursor: pointer;
+    z-index: 1; 
+
+}
+.carousel_card .carousel_text {
+    opacity: 0;
+}
+
+.carousel_card-active {
+    pointer-events: auto; 
+    width: 584px; 
+    height: 500px;
+    z-index: 2; 
+}
+.carousel_card-active .carousel_text {
+    opacity: 1;
+}
+.carousel_image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
+
+
+.carousel_text {
+    color: var(--color-white);
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33.6px;
+    position: absolute;
+    bottom: 20px; 
+    left: 20px; 
+    right: 20px; 
+}

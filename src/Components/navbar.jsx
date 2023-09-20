@@ -13,27 +13,27 @@ const Navbar = () => {
   return (
     <nav class="navbar">
         <div className="navbar_container">
-            <Link to= "/" className='logo'>
+            <Link to= "/" className='logo' onClick={() => setIsNavShowing(false)}>
                 {/* <img src={Logo} alt="Nav Logo" /> */}
                 
                 <span className="donate_logo"> Dona.te</span>
             </Link>
-            <ul className={`navbar_links ${isNavShowing ? 'show_nav' :'hide_nav'}`}>
+            <ul className={`navbar_links ${isNavShowing ? 'show_nav' :'hide_nav'}`} onClick={() => setIsNavShowing(prev => !prev)}>
                 {
                     links.map(({name, path},index)=>{
                         return(
                             <li key={index}>
-                                <NavLink to={path} className={({isActive}) => isActive ? 'active-nav' : ''}>{name}</NavLink>
+                                <NavLink to={path} className={({isActive}) => isActive ? 'active-nav' : ''} >{name}</NavLink>
                             </li>
                         )
                     })
                 }
                 <div className="navbar_buttons">
-                    <button className="btn"> Sign In</button>
-                    <button className="btn btn-primary">Create fund</button>
+                    <NavLink to={'/signin'} className="btn"> Sign In</NavLink>
+                    <NavLink to={'/createfund'} className="btn btn-primary">Create fund</NavLink>
                 </div>
             </ul>
-            <div className="nav_toggle-btn" onClick={() => setIsNavShowing(!isNavShowing)}>
+            <div className="nav_toggle-btn" onClick={() => setIsNavShowing(prev => !prev)}>
                 {
                     isNavShowing ? <MdOutlineClose/> :<FaBars/> 
                 }
