@@ -43,7 +43,7 @@ body {
     background: var(--color-light);
     color: var(--color-bg);
     line-height: 1.7;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .container {
@@ -64,9 +64,9 @@ h1 {
     font-size: 3rem;
 }
 
-section {
+/* section {
     margin-top: 8rem;
-}
+} */
 
 section > h2, section > h5 {
     text-align: center;
@@ -84,10 +84,10 @@ section >h2 {
 
 a {
     color: var(--color-black);
-    font-family: 'Arimo', sans-serif;
+    /* font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    line-height: 21.6px;
+    line-height: 21.6px; */
     transition: var(--transition);
 }
 

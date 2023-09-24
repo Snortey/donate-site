@@ -1,0 +1,219 @@
+.fundraiser_header{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 65px 112px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.input_field {
+    position: relative;
+    max-width: 379px;
+    width: 100%;
+    height: 76px;
+    border-radius: 160px;
+    background-color: var(--color-light);
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 24px 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+} 
+.input_icon{
+    height: 20px;
+    width: 20px;
+    font-size: 23px;
+    font-weight: 900;
+}
+.input_field input {
+    background: none;
+    outline: none;
+    border: none;
+    text-align: left;
+    line-height: 27.6px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-black);
+}  
+.input_field input::placeholder {
+    font-family: 'Archivo', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    display: flex;
+    color: var(--color-black);
+}
+.search_bar{
+    margin-bottom: 20px;
+}
+
+.Main_avatar img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 12rem;
+    background-color: var(--color-light);
+}
+
+.avatar_content img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 52px;
+    height: 52px;
+    border-radius: 12rem;
+    background-color: var(--color-light);
+}
+.fundraiser_image img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 725px;
+    height: 329px;/*329*/
+    border-radius: 12px; 
+}
+
+.Main_fundraiser_image{
+    margin-bottom: 10px;
+}
+.Main_fundraiser_image img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 347px;
+    height: 185px;
+    border-radius: 12px; 
+}
+
+.Main_avatar{
+    display: flex;
+    gap: 10px;
+}
+.Main_avatar h3 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+}
+.Main_avatar small{
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+}
+
+/* .fundraiser_featuredDonation-MainContent p{
+    gap: 10px;
+} */
+.fundraiser_left{
+    align-items: start;
+}
+.fundraiser_featuredDonation{
+    position: relative;
+    padding: 16px;
+    border-radius: 16px;
+    width: 379px;
+    height: 422px;
+    background: var(--color-light);
+    position: sticky;
+    top: 130px;
+}
+
+
+
+.fundraiser_featuredDonation h2{
+    font-weight: 600;
+    font-family: 'Arimo', sans-serif;
+    font-size: 28px;
+    line-height: 33.6px;
+    margin-bottom: 20px;
+}
+.fundraiser_Main_profile{
+    margin-bottom: 10px;
+}
+.fundraiser_Main_profile p{
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    
+}
+.fundraiser_button .btn-primary{
+    width: 347px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.fundraiser_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.fundraiser_content-details{
+    padding: 32px;
+    border-radius: 16px;
+    width: 789px;
+    height: 611px;
+    background: var(--color-light);
+    
+}
+.avatar_content{
+    display: flex;
+    gap: 20px;
+}
+.avatar_content-details h3{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27.6px;
+}
+.avatar_content-details small{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+}
+
+.fundraiser_top_profile p{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fundraiser_icons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 80px;
+}
+.fundraiser_icons .icon{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.fundraiser_icons .icon:hover{
+    color: var(--color-bg); 
+}
+
+.fundraiser_icons .linkicon{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 21.78px;
+    color: var( --color-black);
+}
+.fundraiser_icons .linkicon:hover{
+    color: var(--color-bg);
+}
+
+.icons{
+    width: 35px;
+    font-size: 35px;
+}
