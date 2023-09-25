@@ -1,0 +1,188 @@
+.signin_container{
+    background: url(../../Assets/1670487955908.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    padding: 80px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.signin_container h2{
+    font-family: 'Arimo', sans-serif;
+    font-size: 69px;
+    font-weight: 600;
+    line-height: 82.8px;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+.signin_header .signin_title{
+    font-family: 'Arimo', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 42px;
+    color: var(--color-black);
+}
+.title_bottom h4{
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    color: var(--color-black);
+}
+
+.title_bottom .create{
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+    color: var(--color-bg);
+}
+.title_bottom .create:hover{
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: all 600ms ease-in-out;
+}
+.continue h4{
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #707070; 
+}
+
+.signin_footer h4{
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    color: var(--color-black); 
+}
+.signin_footer .contactUs{
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+    color: var(--color-bg);
+}
+.form_container{
+    background-color: var(--color-white);
+    width: 687px;
+    height:715px;
+    border-radius:16px ;
+    padding: 66px 58px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.signin_header{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title_bottom{
+    display: flex;
+    gap: 8px;
+}
+.signin_content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.input_field2{
+    position: relative;
+    width: 571px;
+    height: 54px;
+    border-radius: none;
+    background-color: none;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #CCCCCC;
+}
+
+.input_field2 input{
+    background: none;
+    outline: none;
+    border: none;
+    text-align: left;
+    line-height: 27.6px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--color-black);
+}
+.signin_content .btn{
+    width: 571px;
+    text-align: center;
+}
+
+.continue {
+    display: flex;
+    gap: 17px;
+    justify-content: center;
+    align-items: center;
+}
+.continue .dash{
+    border: 1.5px solid #CCCCCC;
+    width: 168px;
+}
+
+.signin_footer {
+    display: flex;
+    gap: 8px;
+}
+.social_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.social_icons .google:hover {
+    border: 3px solid var(--color-primary);
+}
+.social_icons .google {
+    border-radius: 256px;
+    border: 1px solid #707070;
+    padding: 10px;
+    height: 64px;
+    width: 64px;
+}
+.social_icons .facebook {
+    border-radius: 256px;
+    border: 1px solid #707070;
+    color: #207af8;
+    padding: 10px;
+    height: 64px;
+    width: 64px;
+}
+.social_icons .facebook:hover {
+    border: 3px solid var(--color-primary);
+}
+.social_icons .apple {
+    border-radius: 256px;
+    border: 1px solid #707070;
+    color: var(--color-black);
+    padding: 10px;
+    height: 64px;
+    width: 64px;
+}
+.social_icons .apple:hover {
+    border: 3px solid var(--color-primary);
+}
+
+.contactUs:hover{
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: all 600ms ease-in-out;
+}
