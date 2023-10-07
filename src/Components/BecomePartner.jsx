@@ -14,13 +14,13 @@ const BecomePartner = () => {
                         <img src={IndividualImage} alt="" className="become_image" />
                         <h3>Individual</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. Tristique porttitor arcu pulvinar eu consequat quisque id at.</p>
-                        <Link to={'/signin'} className="btn "> SignIn</Link>
+                        <Link to={'/usersignup'} className="btn "> Sign up</Link>
                     </div>
                     <div className="become">
                     <img src={OrganizationImage} alt="" className="become_image" />
                         <h3>Organization</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. Tristique porttitor arcu pulvinar eu consequat quisque id at.</p>
-                        <Link to={'/signin'} className="btn "> SignIn</Link>
+                        <Link to={'/organizationsignup'} className="btn "> Sign up</Link>
                     </div>
                 </div>
         </div>

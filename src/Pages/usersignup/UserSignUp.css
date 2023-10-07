@@ -1,5 +1,5 @@
-.signin_container{
-    background: url(../../Assets/1670487955908.jpg);
+.signup_container{
+    background: url(../../Assets/1670487959827\ \(1\).jpg);
     background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
 }
-.signin_container .dona{
+.signup_container .dona{
     font-family: 'Arimo', sans-serif;
     font-size: 69px;
     font-weight: 600;
@@ -19,7 +19,7 @@
     justify-content: flex-end;
     
 }
-.signin_header .signin_title{
+.signup_header .signup_title{
     font-family: 'Arimo', sans-serif;
     font-size: 35px;
     font-weight: 600;
@@ -54,14 +54,14 @@
     color: #707070; 
 }
 
-.signin_footer h4{
+.signup_footer h4{
     font-family: 'Archivo', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.6px;
     color: var(--color-black); 
 }
-.signin_footer .contactUs{
+.signup_footer .contactUs{
     font-family: 'Archivo', sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -71,14 +71,14 @@
 .form_container{
     background-color: var(--color-white);
     width: 687px;
-    height:715px;
+    height:879px;
     border-radius:16px ;
     padding: 66px 58px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
-.signin_header{
+.signup_header{
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -88,7 +88,7 @@
     display: flex;
     gap: 8px;
 }
-.signin_content{
+.signup_content{
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -118,7 +118,7 @@
     font-weight: 400;
     color: var(--color-black);
 }
-.signin_content .btn{
+.signup_content .btn{
     width: 571px;
     text-align: center;
 }
@@ -134,7 +134,7 @@
     width: 168px;
 }
 
-.signin_footer {
+.signup_footer {
     display: flex;
     gap: 8px;
 }
@@ -185,70 +185,4 @@
     color: var(--color-primary);
     font-weight: 600;
     transition: all 600ms ease-in-out;
-}
-
-.modal, .overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    z-index: 90;
-}
-
-.overlay {
-    background: rgba(49,49,49,0.8);
-}
-.modal_content {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-5%, -100%); /* Start from the far top of the screen */
-    background: var(--color-white);
-    border-radius: 16px;
-    padding: 64px 40px;
-    width: 535px;
-    height: 384px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
-}
-
-@keyframes slideDown {
-    to {
-        transform: translate(-5%, 50%); /* Final position */
-    }
-}
-
-
-
-
-
-
-.modal_top h3{
-    font-family: 'Arimo', sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 42px;
-    color: var(--color-black);
-}
-.modal_top h4{
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21.6px;
-    color: var(--color-black);
-    margin-top: 8px;
-}
-.modal_bottom{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.modal_bottom .btn{
-    width: 455px;
-    text-align: center;
 }

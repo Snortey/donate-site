@@ -1,0 +1,188 @@
+.Donation_modal {
+  width: 898px;
+  height: 871;
+  padding: 24px 120px;
+  background-color: var(--color-light);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.donal_modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.donal_modal-header h4 {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+}
+.donal_modal-header h4 .foundationGroup {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33.6px;
+  cursor: pointer;
+}
+
+.donal_modal-header p {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+}
+.donal_modal-header p .foundationName {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 27.6px;
+  color: #707070;
+  cursor: pointer;
+}
+.donal_modal-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.donal_modal-amount small {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.6px;
+}
+.donal_modal-amount_field {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 40px 24px;
+  width: 100%;
+  display: flex;
+}
+.donal_modal-amount_field small {
+  font-family: "Arimo", sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 66px;
+}
+
+.donal_modal-amount_field .amount-input {
+  width: 90%;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: "Arimo", sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 66px;
+  color: var(--color-black);
+  text-align: right;
+}
+.money_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.donal_modal-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.paymentheading {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.6px;
+}
+.payment_radio {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.custom-radio {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  position: relative;
+  padding-left: 70px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #707070;
+  cursor: pointer;
+}
+.custom-radio:last-child {
+  border-bottom: unset;
+  padding-bottom: unset;
+}
+
+.custom-radio input[type="radio"] {
+  display: none;
+}
+.custom-radio span {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 3px solid #767676;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.custom-radio input[type="radio"]:checked ~ span {
+  border: 3px solid var(--color-bg);
+}
+
+.custom-radio span:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  background: var(--color-primary);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 12rem;
+  transition: 300ms ease-in-out 0s;
+}
+.custom-radio input[type="radio"]:checked ~ span:after {
+  transform: translate(-50%, -50%) scale(1);
+  background: var(--color-primary);
+}
+
+.donal_modal-footer button {
+  width: 100%;
+}
+
+.donal_modal-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.donal_modal-footer p {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  color: #707070;
+}
+.donal_modal-footer p span {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.4px;
+  color: var(--color-black);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.donal_modal-footer p span:hover {
+  color: var(--color-bg);
+}

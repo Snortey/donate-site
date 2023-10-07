@@ -329,7 +329,7 @@
 .inspired_Slider{
     padding: 24px;
     border-radius: 24px;
-    gap: 32px;
+    /* gap: 32px; */
     background-color: var(--color-white);
     width:379px;
     height: 240px;
@@ -346,13 +346,15 @@
     border:2px solid var(--color-bg);
     backdrop-filter: blur(5px);
 }
-
-.inspired-right{
+.inspired2{
     display: flex;
-    /* flex-direction: column; */
-    /* position: relative; */
-    gap: 30px;
+    flex-direction: column;
+    gap: 40px;
+}
+.inspired-right{
     margin-top: 30px;
+    width: 909px;
+    /* height: 290px; */
 }
 
 .arrow{
@@ -363,11 +365,11 @@
     width: 64px;
     height: 64px;
     box-shadow: 0 1rem 1.5rem #00000071;
-    margin-top: 40px;
     cursor: pointer;
 }
 
 .arrow_buttons{
+    position: relative;
     font-size: 8px;
     display: flex;    
     gap: 20px;
@@ -379,6 +381,11 @@
     background-color: var(--color-primary);
     box-shadow: none;
 }
+
+.swiper{
+    padding: 40px;
+}
+
 
 /* footer */
 
