@@ -1,26 +1,21 @@
-
-
-
 export const links = [
-    {
-        name:"Home",
-        path: '/'
-    },
-    {
-        name:"Fundraiser",
-        path: '/fundraiser'
-    },
-    {
-        name:"Donations",
-        path: '/donations'
-    },
-    {
-        name:"How It Works",
-        path: '/howpage'
-    }
-]
-
-
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Fundraiser",
+    path: "/fundraiser",
+  },
+  {
+    name: "Donations",
+    path: "/feed",
+  },
+  {
+    name: "How It Works",
+    path: "/howpage",
+  },
+];
 
 // export const links = [
 //     {
@@ -48,12 +43,6 @@ export const links = [
 //         path: '/contact'
 //     }
 // ]
-
-
-
-
-
-
 
 // export const programs = [
 //     {
@@ -86,13 +75,6 @@ export const links = [
 //     }
 // ]
 
-
-
-
-
-
-
-
 // export const values = [
 //     {
 //         id: 1,
@@ -119,14 +101,6 @@ export const links = [
 //         desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum."
 //     }
 // ]
-
-
-
-
-
-
-
-
 
 // export const faqs = [
 //     {
@@ -160,13 +134,6 @@ export const links = [
 //         answer: "Quas, est at! Molestiae quidem ab soluta exercitationem culpa nostrum iusto illum qui non a harum deserunt atque commodi at velit, consequatur quibusdam dignissimos cum labore possimus placeat consectetur nisi cupiditate."
 //     }
 // ]
-
-
-
-
-
-
-
 
 // export const testimonials = [
 //     {
@@ -205,12 +172,6 @@ export const links = [
 //         avatar: require("./images/avatar5.jpg")
 //     }
 // ]
-
-
-
-
-
-
 
 // export const plans = [
 //     {
@@ -278,21 +239,12 @@ export const links = [
 //     }
 // ]
 
-
-
-
-
-
-
-
-
 // const Trainer1 = require('./images/trainer1.jpg')
 // const Trainer2 = require('./images/trainer2.jpg')
 // const Trainer3 = require('./images/trainer3.jpg')
 // const Trainer4 = require('./images/trainer4.jpg')
 // const Trainer5 = require('./images/trainer5.jpg')
 // const Trainer6 = require('./images/trainer6.jpg')
-
 
 // export const trainers = [
 //     {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import DonateImage from "../Assets/1670487959827 (1).jpg";
 import DonateProfile from "../Assets/photo_2023-07-07_22-47-15.jpg";
@@ -118,8 +118,38 @@ const MainDonationPage = () => {
     setNumCommentsToShow(4);
     setShowViewLess(false);
   };
+
+  const [modal, setModal] = useState(false);
+  const modalRef = useRef(null);
+
+  const toggleModal = (e) => {
+    if (modalRef.current && modalRef.current.contains(e.target)) {
+      // Clicked inside the modal, do nothing
+      return;
+    }
+    setModal(!modal);
+
+    // Toggle body scroll and MainDonationPage_container position
+    if (!modal) {
+      document.body.classList.add("modal-open"); // Add a class to disable scrolling
+      document.querySelector(".MainDonationPage_container").style.position =
+        "fixed"; // Fix the background
+    } else {
+      document.body.classList.remove("modal-open"); // Remove the class to enable scrolling
+      document.querySelector(".MainDonationPage_container").style.position =
+        "relative"; // Reset the background position
+    }
+  };
+
   return (
     <section className="MainDonationPage_container">
+      {modal && (
+        <div onClick={toggleModal} className="modal-overlay">
+          <div ref={modalRef} className="modal__content">
+            <DonalModal />
+          </div>
+        </div>
+      )}
       <div className="MainDonationPage_left">
         <div className="MainDonationPage_left-header">
           <h2>Christmas for children</h2>
@@ -150,9 +180,9 @@ const MainDonationPage = () => {
             diam aliquam a ut. Dictum elementum ultricies nec mattis sit eu.
           </p>
           <div className="MainDonationPage_buttons">
-            <Link to={"/"} className="btn btn-primary">
+            <button onClick={toggleModal} className="btn btn-primary">
               Donate
-            </Link>
+            </button>
             <button onClick={handleShareClick} className="btn">
               {" "}
               Share
@@ -236,9 +266,9 @@ const MainDonationPage = () => {
             </div>
           </div>
           <div className="summary_button">
-            <Link to={"/"} className="btn btn-primary">
+            <button onClick={toggleModal} className="btn btn-primary">
               Donate
-            </Link>
+            </button>
           </div>
         </div>
         <div className="MainDonationPage_contact-organizers">
@@ -258,7 +288,6 @@ const MainDonationPage = () => {
           </div>
         </div>
       </div>
-      <DonalModal />
     </section>
   );
 };

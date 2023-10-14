@@ -6,11 +6,12 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--color-white);
+  background: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
   place-items: center;
+  backdrop-filter: blur(5px);
 }
 
 .navbar_container {
@@ -37,6 +38,13 @@ nav {
   white-space: nowrap;
 }
 
+.navbar_links .active-nav {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 27.6px;
+  letter-spacing: 1px;
+  /* Add any other styles you want for the active link */
+}
 .navbar_links li:hover {
   font-weight: 600;
   font-size: 21px;
@@ -49,6 +57,13 @@ nav {
   gap: 32px;
 }
 
+.navbar_buttons .btn {
+  background: none;
+}
+.navbar_buttons .btn-primary {
+  background: var(--color-bg);
+}
+
 .nav_toggle-btn {
   display: none;
 }
@@ -57,17 +72,18 @@ nav {
   position: relative;
 }
 
-.active-nav::after {
+/* .active-nav::after {
   content: "";
   display: block;
   width: 2rem;
   height: 2rem;
-  background: var(--color-white);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
   position: absolute;
   left: calc(25%);
   transform: rotate(45deg);
   margin-top: 0.9rem;
-}
+} */
 
 .navbar_login_profile img {
   aspect-ratio: 1/1;

@@ -11,6 +11,7 @@ import Navbar from "./Components/navbar";
 import OrganizationSignUp from "./Pages/organizationsignup/OrganizationSignUp";
 import UserSignUp from "./Pages/usersignup/UserSignUp";
 import LoginNavbar from "./Components/LoginNavbar";
+import FirstDonation from "./Pages/feed/FirstDonation";
 
 const App = () => {
   return (
@@ -31,6 +32,15 @@ const App = () => {
             <>
               <Navbar />
               <Fundraiser />
+            </>
+          }
+        />
+        <Route
+          path="feed"
+          element={
+            <>
+              <Navbar />
+              <FirstDonation />
             </>
           }
         />

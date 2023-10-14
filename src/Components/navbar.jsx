@@ -25,6 +25,7 @@ const Navbar = () => {
               <li key={index}>
                 <NavLink
                   to={path}
+                  exact
                   className={({ isActive }) => (isActive ? "active-nav" : "")}
                 >
                   {name}
@@ -33,8 +34,7 @@ const Navbar = () => {
             );
           })}
           <div className="navbar_buttons">
-            <NavLink to={"/signin"} className="btn">
-              {" "}
+            <NavLink to={"/signin"} className="btn signer">
               Sign In
             </NavLink>
             <NavLink to={"/createfund"} className="btn btn-primary">

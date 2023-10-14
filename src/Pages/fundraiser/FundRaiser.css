@@ -1,229 +1,230 @@
-.fundraiser_header{
-    background-color: var(--color-white);
-    color: var(--color-black);
-    padding: 65px 112px;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 40px;
-    margin-top: 100px;
-    /* align-items: start; */
-    /* overflow-x: visible; */
+.fundraiser_container {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  gap: 40px;
+  margin-top: 100px;
 }
 
-.input_field {
-    position: relative;
-    max-width: 379px;
-    width: 100%;
-    height: 76px;
-    border-radius: 160px;
-    background-color: var(--color-light);
-    display: grid;
-    grid-template-columns: 10% 90%;
-    padding: 24px 35px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-} 
-.input_icon{
-    height: 20px;
-    width: 20px;
-    font-size: 23px;
-    font-weight: 900;
+.fundraiser_header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  place-items: center;
+  align-items: center;
+  padding: 65px 112px;
 }
-.input_field input {
-    background: none;
-    outline: none;
-    border: none;
-    text-align: left;
-    line-height: 27.6px;
-    font-family: 'Archivo', sans-serif;
-    font-size: 23px;
-    font-weight: 400;
-    color: var(--color-black);
-}  
-.input_field input::placeholder {
-    font-family: 'Archivo', sans-serif;
-    font-size: 23px;
-    font-weight: 400;
-    display: flex;
-    color: var(--color-black);
+.fundraiser_header-section h2 {
+  font-family: "Arimo", sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 66px;
 }
-.search_bar{
-    margin-bottom: 20px;
+.fundraiser_header-paragraph {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+  color: #707070;
+  max-width: 584px;
 }
 
-.Main_avatar img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    width: 30px;
-    height: 30px;
-    border-radius: 12rem;
-    background-color: var(--color-light);
+.fundraiser_input_field {
+  position: relative;
+  min-width: 584px;
+  width: 100%;
+  height: 76px;
+  border-radius: 160px;
+  background-color: var(--color-light);
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding: 24px 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.fundraiser_input_icon {
+  height: 20px;
+  width: 20px;
+  font-size: 23px;
+  font-weight: 900;
+}
+.fundraiser_input_field input {
+  background: none;
+  outline: none;
+  border: none;
+  text-align: left;
+  line-height: 27.6px;
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+.fundraiser_input_field input::placeholder {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  display: flex;
+  color: var(--color-black);
+}
+.fundraiser_search_bar {
+  margin-bottom: 20px;
+}
+.fundraiser_filter-section {
+  padding: 0 112px;
+  padding-bottom: 65px;
+}
+.fundraiser_filter-section-top .filter_option {
+  display: flex;
+  gap: 8px;
+  padding: 8px 24px;
+  background-color: var(--color-black);
+  border-radius: 120px;
+  color: var(--color-white);
+  max-width: 156px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.fundraiser_filter-section-top .filter_option:hover {
+  background-color: var(--color-light);
+  color: var(--color-bg);
+}
+.filter_option small {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  display: flex;
 }
 
-.avatar_content img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    width: 52px;
-    height: 52px;
-    border-radius: 12rem;
-    background-color: var(--color-light);
-}
-.fundraiser_image img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    width: 725px;
-    height: 329px;/*329*/
-    border-radius: 12px; 
+.filter_icon {
+  width: 32px;
+  height: 23px;
 }
 
-.Main_fundraiser_image{
-    margin-bottom: 10px;
+.filter_item-list img {
+  width: 276px;
+  height: 208px;
+  border-radius: 16px;
 }
-.Main_fundraiser_image img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    width: 347px;
-    height: 185px;
-    border-radius: 12px; 
-}
-
-.Main_avatar{
-    display: flex;
-    gap: 10px;
-}
-.Main_avatar h3 {
-    font-family: 'Archivo', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16.8px;
-}
-.Main_avatar small{
-    font-family: 'Archivo', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.4px;
+.filter_item-list small {
+  padding: 4px 8px;
+  border-radius: 56px;
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
 }
 
-/* .fundraiser_featuredDonation-MainContent p{
-    gap: 10px;
-} */
-.fundraiser_left{
-    /* display: flex;
-    flex-direction: column;
-    align-items: start; */
-
+.filter_item-list.non-profit small {
+  background-color: var(--non-profit-color);
 }
-.fundraiser_featuredDonation-wrapper {
-    overflow-x: auto; /* Add this to enable horizontal scrolling within the wrapper */
+.filter_item-list.agency small {
+  background-color: var(--agency-color);
 }
-
-.fundraiser_featuredDonation{
-    position: -webkit-sticky;
-    padding: 16px;
-    border-radius: 16px;
-    width: 379px;
-    height: 422px;
-    background: var(--color-light);
-    position: sticky;
-    top: 130px;
-    z-index: 1;
+.filter_item-list.organization small {
+  background-color: var(--organization-color);
+}
+.filter_item-list h3 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  margin-top: 10px;
 }
 
-
-
-.fundraiser_featuredDonation h2{
-    font-weight: 600;
-    font-family: 'Arimo', sans-serif;
-    font-size: 28px;
-    line-height: 33.6px;
-    margin-bottom: 20px;
+.fundraiser_filter-section-left img {
+  width: 584px;
+  height: 438px;
+  border-radius: 16px;
 }
-.fundraiser_Main_profile{
-    margin-bottom: 10px;
+.fundraiser_filter-section-left small {
+  font-weight: 700;
 }
-.fundraiser_Main_profile p{
-    font-family: 'Archivo', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14.4px;
-    
-}
-.fundraiser_button .btn-primary{
-    width: 347px;
-    justify-content: center;
-    text-align: center;
+.fundraiser_filter-section-left h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52.8px;
+  width: 584px;
+  margin-top: 10px;
 }
 
-
-.fundraiser_content{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.fundraiser_content-details{
-    padding: 32px;
-    border-radius: 16px;
-    width: 789px;
-    height: 611px;
-    background: var(--color-light);
-    
-}
-.avatar_content{
-    display: flex;
-    gap: 20px;
-}
-.avatar_content-details h3{
-    font-family: 'Archivo', sans-serif;
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 27.6px;
-}
-.avatar_content-details small{
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21.6px;
+.fundraiser_filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.fundraiser_top_profile p{
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21.6px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.fundraiser_filter-section-down {
+  display: flex;
+  gap: 30px;
+}
+.filter_item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.hidden {
+  display: none;
 }
 
-.fundraiser_icons{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 80px;
-}
-.fundraiser_icons .icon{
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-.fundraiser_icons .icon:hover{
-    color: var(--color-bg); 
+.fundraiser_partner-section {
+  padding: 120px 112px;
+  background-color: #fbeee6;
+  display: flex;
+  gap: 30px;
 }
 
-.fundraiser_icons .linkicon{
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 21.78px;
-    color: var( --color-black);
+.fundraiser_partner-section-left img {
+  width: 684px;
+  height: 671px;
+  border-radius: 24px;
 }
-.fundraiser_icons .linkicon:hover{
-    color: var(--color-bg);
+.fundraiser_partner-section-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+.fundraiser_partner-section-right h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 82.8px;
 }
 
-.icons{
-    width: 35px;
-    font-size: 35px;
+.fundraiser_partner-section-right p {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+}
+.fundraiser_partner-section-right .btn {
+  background-color: unset;
+}
+
+.fundraiser_contact-section {
+  padding: 120px 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.fundraiser_contact-section h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 82.8px;
+}
+
+.fundraiser_contact-section p {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+  max-width: 584px;
+  text-align: center;
 }
