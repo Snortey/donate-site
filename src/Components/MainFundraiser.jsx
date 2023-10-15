@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { BiSliderAlt } from "react-icons/bi";
-import { BiDonateHeart } from "react-icons/bi";
+import { MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import PATIMAGE from "../Assets/photo_2023-07-07_22-47-15.jpg";
 import AVATAR2 from "../Assets/photo_2023-07-07_22-47-18.jpg";
 import AVATAR3 from "../Assets/photo_2023-07-07_22-47-25.jpg";
 import AVATAR4 from "../Assets/photo_2023-07-07_22-47-29.jpg";
 import IMG1 from "../Assets/1670487955908.jpg";
-import IMG2 from "../Assets/1670487955908.jpg";
-import IMG3 from "../Assets/1670487955908.jpg";
-import IMG4 from "../Assets/1670487955908.jpg";
-import IMG5 from "../Assets/1670487955908.jpg";
-import IMG6 from "../Assets/1670487955908.jpg";
+import IMG2 from "../Assets/1670487957332.jpg";
+import IMG3 from "../Assets/1670487959827 (1).jpg";
+import IMG4 from "../Assets/1670735162569.jpg";
+import IMG5 from "../Assets/photo_2023-07-07_22-47-15.jpg";
+import IMG6 from "../Assets/photo_2023-07-07_22-47-25.jpg";
 import IMG7 from "../Assets/1670487955908.jpg";
 import IMG8 from "../Assets/1670487955908.jpg";
 import IMG9 from "../Assets/1670487955908.jpg";
@@ -78,6 +79,25 @@ const MainFundraiser = () => {
   const [Search, setSearch] = useState(" ");
   console.log(Search);
   const [selectedItem, setSelectedItem] = useState(data[0]);
+  const [showFilter, setShowFilter] = useState(false);
+  const [showCategoryFilter, setShowCategoryFilter] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+
+  const toggleFilter = () => {
+    setShowFilter(!showFilter);
+    setShowCategoryFilter(false);
+  };
+  const toggleCategoryFilter = () => {
+    setShowCategoryFilter(!showCategoryFilter);
+  };
+
+  const toggleCategorySelection = (category) => {
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
+  };
 
   function getBackgroundColor(organizationType) {
     switch (organizationType) {
@@ -113,10 +133,82 @@ const MainFundraiser = () => {
       </div>
       <div className="fundraiser_filter-section">
         <div className="fundraiser_filter-section-top">
-          <div className="filter_option">
-            <small>filter</small>
-            <BiSliderAlt className="filter_icon" />
+          <div className="main_filter-option">
+            <div className="Main_main-filter_menu">
+              <div className="filter_option" onClick={toggleFilter}>
+                <small>filter</small>
+                <BiSliderAlt className="filter_icon" />
+              </div>
+              {showFilter && (
+                <div
+                  className="main_category-filter"
+                  onClick={toggleCategoryFilter}
+                >
+                  {selectedCategories.length > 0 && (
+                    <div className="filter-number">
+                      {selectedCategories.length}
+                    </div>
+                  )}
+                  <small>Category</small>
+                  {showCategoryFilter ? (
+                    <MdKeyboardArrowUp className="filter_icon-up" />
+                  ) : (
+                    <MdKeyboardArrowDown className="filter_icon-down" />
+                  )}
+                </div>
+              )}
+            </div>
+            {showCategoryFilter && (
+              <article className="category-filter">
+                <h3>Choose one or more</h3>
+                <div className="category-filter-items">
+                  <li
+                    onClick={() => toggleCategorySelection("Health")}
+                    className={
+                      selectedCategories.includes("Health") ? "active" : ""
+                    }
+                  >
+                    Health
+                  </li>
+                  <li
+                    onClick={() => toggleCategorySelection("Education")}
+                    className={
+                      selectedCategories.includes("Education") ? "active" : ""
+                    }
+                  >
+                    Education
+                  </li>
+                  <li
+                    onClick={() => toggleCategorySelection("Non-profit")}
+                    className={
+                      selectedCategories.includes("Non-profit") ? "active" : ""
+                    }
+                  >
+                    Non-profit
+                  </li>
+                  <li
+                    onClick={() => toggleCategorySelection("Agency")}
+                    className={
+                      selectedCategories.includes("Agency") ? "active" : ""
+                    }
+                  >
+                    Agency
+                  </li>
+                  <li
+                    onClick={() => toggleCategorySelection("Organization")}
+                    className={
+                      selectedCategories.includes("Organization")
+                        ? "active"
+                        : ""
+                    }
+                  >
+                    Organization
+                  </li>
+                </div>
+              </article>
+            )}
           </div>
+
           <div className="filter_content">
             <div className="filter_content-left"></div>
             <div className="filter_content-right"></div>

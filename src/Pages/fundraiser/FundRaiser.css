@@ -99,8 +99,7 @@
 }
 
 .filter_icon {
-  width: 32px;
-  height: 23px;
+  font-size: 26px;
 }
 
 .filter_item-list img {
@@ -227,4 +226,84 @@
   line-height: 27.6px;
   max-width: 584px;
   text-align: center;
+}
+.Main_main-filter_menu {
+  display: flex;
+  gap: 20px;
+}
+
+.main_category-filter {
+  display: flex;
+  gap: 5px;
+  padding: 8px 24px;
+  background-color: var(--color-bg);
+  border-radius: 120px;
+  color: var(--color-white);
+  max-width: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main_category-filter:hover {
+  background-color: var(--color-hover);
+  color: var(--color-white);
+}
+.main_category-filter small {
+  font-family: "Arimo", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.6px;
+  display: flex;
+}
+.filter_icon-up {
+  font-size: 34px;
+}
+.filter_icon-down {
+  font-size: 34px;
+}
+
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+.category-filter h3 {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+  color: #707070;
+}
+
+.category-filter-items {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+.category-filter-items li {
+  padding: 8px 24px;
+  background-color: none;
+  border: 2px solid black;
+  border-radius: 120px;
+  color: var(--color-black);
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.category-filter-items .active {
+  border: 2px solid #029f80;
+  border-radius: 120px;
+  color: var(--color-primary);
+}
+.filter-number {
+  font-family: "Arimo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
 }
