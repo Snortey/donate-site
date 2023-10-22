@@ -99,31 +99,32 @@ const MainFirstDonation = () => {
             />
           </div>
         </form>
-
-        <div className="MainFirstDonation_featuredDonation">
-          <h2>Featured Donation</h2>
-          <div className="MainFirstDonation_featuredDonation-MainContent">
-            <div className="MainFirstDonation_Main_profile">
-              <div className="Main_avatar">
-                <img src={AVATAR1} alt="" />
-                <div className="Main_avatar_content-details">
-                  <h3>Acacity Foundation</h3>
-                  <small>1hr</small>
+        <div className="MainFirstDonation_featuredDonation-wrapper">
+          <div className="MainFirstDonation_featuredDonation">
+            <h2>Featured Donation</h2>
+            <div className="MainFirstDonation_featuredDonation-MainContent">
+              <div className="MainFirstDonation_Main_profile">
+                <div className="Main_avatar">
+                  <img src={AVATAR1} alt="" />
+                  <div className="Main_avatar_content-details">
+                    <h3>Acacity Foundation</h3>
+                    <small>1hr</small>
+                  </div>
                 </div>
+                <p>
+                  Donate clothes and other household materials to the children
+                  of the Accra Children's Home.
+                </p>
               </div>
-              <p>
-                Donate clothes and other household materials to the children of
-                the Accra Children's Home.
-              </p>
-            </div>
-            <div className="Main_MainFirstDonation_image">
-              <img src={IMG1} alt="" />
-            </div>
-            <div className="MainFirstDonation_button">
-              <Link to={"/donations"} className="btn btn-primary">
-                {" "}
-                Donate
-              </Link>
+              <div className="Main_MainFirstDonation_image">
+                <img src={IMG1} alt="" />
+              </div>
+              <div className="MainFirstDonation_button">
+                <Link to={"/donations"} className="btn btn-primary">
+                  {" "}
+                  Donate
+                </Link>
+              </div>
             </div>
           </div>
         </div>

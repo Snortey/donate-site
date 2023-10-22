@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { BiSliderAlt } from "react-icons/bi";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import PATIMAGE from "../Assets/photo_2023-07-07_22-47-15.jpg";
-import AVATAR2 from "../Assets/photo_2023-07-07_22-47-18.jpg";
-import AVATAR3 from "../Assets/photo_2023-07-07_22-47-25.jpg";
-import AVATAR4 from "../Assets/photo_2023-07-07_22-47-29.jpg";
 import IMG1 from "../Assets/1670487955908.jpg";
 import IMG2 from "../Assets/1670487957332.jpg";
 import IMG3 from "../Assets/1670487959827 (1).jpg";
 import IMG4 from "../Assets/1670735162569.jpg";
 import IMG5 from "../Assets/photo_2023-07-07_22-47-15.jpg";
 import IMG6 from "../Assets/photo_2023-07-07_22-47-25.jpg";
-import IMG7 from "../Assets/1670487955908.jpg";
-import IMG8 from "../Assets/1670487955908.jpg";
+import IMG7 from "../Assets/photo_2023-07-07_22-47-29.jpg";
+import IMG8 from "../Assets/photo_2023-07-07_22-47-18.jpg";
 import IMG9 from "../Assets/1670487955908.jpg";
 
 const data = [
@@ -76,17 +73,34 @@ const data = [
 ];
 
 const MainFundraiser = () => {
-  const [Search, setSearch] = useState(" ");
-  console.log(Search);
+  const [Search, setSearch] = useState("");
   const [selectedItem, setSelectedItem] = useState(data[0]);
   const [showFilter, setShowFilter] = useState(false);
   const [showCategoryFilter, setShowCategoryFilter] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [showLeftSection, setShowLeftSection] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowLeftSection(false); // Hide the left section
+      setTimeout(() => {
+        const currentIndex = data.findIndex(
+          (item) => item.id === selectedItem.id
+        );
+        const nextIndex = (currentIndex + 1) % data.length;
+        setSelectedItem(data[nextIndex]);
+        setShowLeftSection(true); // Show the left section
+      }, 1000); // Delay showing the left section by 1 second
+    }, 10000); // Change every 10 seconds
+
+    return () => clearInterval(interval);
+  }, [selectedItem]);
 
   const toggleFilter = () => {
     setShowFilter(!showFilter);
     setShowCategoryFilter(false);
   };
+
   const toggleCategoryFilter = () => {
     setShowCategoryFilter(!showCategoryFilter);
   };
@@ -112,6 +126,25 @@ const MainFundraiser = () => {
     }
   }
 
+  // Check if there's a search term or selected categories
+  const isFiltering = Search.trim() !== "" || selectedCategories.length > 0;
+
+  const filteredItems = data.filter((item) => {
+    const matchesSearch =
+      Search.trim() === "" ||
+      item.organizationName.toLowerCase().includes(Search.toLowerCase()) ||
+      item.organizationType.toLowerCase().includes(Search.toLowerCase());
+
+    const matchesCategory =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(item.organizationType);
+
+    return matchesSearch && matchesCategory;
+  });
+
+  // // Display 4 items when no search or filter is active
+  // const filteredItems = isFiltering ? data : data.slice(0, 4);
+
   return (
     <section className="fundraiser_container">
       <div className="fundraiser_header-section">
@@ -121,7 +154,7 @@ const MainFundraiser = () => {
           organizations championing a good cause
         </p>
         <form action="" className="fundraiser_search_bar">
-          <div class="fundraiser_input_field">
+          <div className="fundraiser_input_field">
             <BsSearch className="fundraiser_input_icon" />
             <input
               type="organizationType"
@@ -215,60 +248,71 @@ const MainFundraiser = () => {
           </div>
         </div>
         <div className="fundraiser_filter-section-down">
-          <div
-            className={`fundraiser_filter-section-left ${selectedItem.organizationType}`}
-          >
-            {selectedItem && (
-              <div
-                className={`filter_item-list ${selectedItem.organizationType}`}
-                style={{
-                  "--bg-color": getBackgroundColor(
-                    selectedItem.organizationType
-                  ),
-                }}
-              >
-                <img src={selectedItem.image} alt="" />
-                <small
-                  className="smalltype"
-                  style={{ backgroundColor: "var(--bg-color)" }}
+          {/* Conditionally render the left section based on filtering */}
+          {isFiltering && (
+            <div className="fundraiser_filter-section-left hide"></div>
+          )}
+          {!isFiltering && (
+            <div
+              className={`fundraiser_filter-section-left ${
+                showLeftSection ? "" : "hide"
+              } ${selectedItem ? selectedItem.organizationType : ""}`}
+            >
+              {selectedItem && (
+                <div
+                  className={`filter_item-list ${selectedItem.organizationType}`}
+                  style={{
+                    "--bg-color": getBackgroundColor(
+                      selectedItem.organizationType
+                    ),
+                  }}
                 >
-                  {selectedItem.organizationType}
-                </small>
-                <h3>{selectedItem.organizationName}</h3>
-              </div>
-            )}
-          </div>
+                  <img src={selectedItem.image} alt="" />
+                  <small
+                    className="smalltype"
+                    style={{ backgroundColor: "var(--bg-color)" }}
+                  >
+                    {selectedItem.organizationType}
+                  </small>
+                  <h3>{selectedItem.organizationName}</h3>
+                </div>
+              )}
+            </div>
+          )}
           <div className="fundraiser_filter-section-right">
-            <article className="filter_item-container">
-              {data
-                .filter((item) => {
-                  return (
-                    Search.trim() === "" ||
-                    item.organizationName
-                      .toLowerCase()
-                      .includes(Search.toLowerCase()) ||
-                    item.organizationType
-                      .toLowerCase()
-                      .includes(Search.toLowerCase())
-                  );
-                })
-                .map(({ organizationName, organizationType, image }, index) => {
-                  const typeClass = organizationType.toLowerCase();
-                  const itemClasses = `filter_item-list ${typeClass} ${
-                    index >= 4 ? "hidden" : "" // Add a "hidden" class for items beyond the first 4
-                  }`;
-                  return (
-                    <div
-                      className={itemClasses}
-                      key={index}
-                      onClick={() => setSelectedItem(data[index])}
-                    >
-                      <img src={image} alt="" />
-                      <small>{organizationType}</small>
-                      <h3>{organizationName}</h3>
-                    </div>
-                  );
-                })}
+            <article
+              className={`filter_item-container ${
+                isFiltering ? "filtered" : ""
+              }`}
+            >
+              {isFiltering
+                ? filteredItems.map((item, index) => {
+                    const typeClass = item.organizationType.toLowerCase();
+                    return (
+                      <div
+                        className={`filter_item-list ${typeClass}`}
+                        key={index}
+                      >
+                        <img src={item.image} alt="" />
+                        <small>{item.organizationType}</small>
+                        <h3>{item.organizationName}</h3>
+                      </div>
+                    );
+                  })
+                : // When no search or filter is active, display 4 items in a row
+                  data.slice(0, 4).map((item, index) => {
+                    const typeClass = item.organizationType.toLowerCase();
+                    return (
+                      <div
+                        className={`filter_item-list ${typeClass}`}
+                        key={index}
+                      >
+                        <img src={item.image} alt="" />
+                        <small>{item.organizationType}</small>
+                        <h3>{item.organizationName}</h3>
+                      </div>
+                    );
+                  })}
             </article>
           </div>
         </div>

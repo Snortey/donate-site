@@ -133,6 +133,14 @@
   margin-top: 10px;
 }
 
+.fundraiser_filter-section-left {
+  transition: opacity 1s ease-in-out;
+}
+
+.fundraiser_filter-section-left.hide {
+  opacity: 0.08;
+}
+
 .fundraiser_filter-section-left img {
   width: 584px;
   height: 438px;
@@ -160,11 +168,22 @@
   display: flex;
   gap: 30px;
 }
+/* When filtering is not active, use a 2-column grid */
 .filter_item-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  cursor: pointer;
 }
+
+/* When filtering is active, use a 4-column grid */
+.filter_item-container.filtered {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 30px;
+}
+
 .hidden {
   display: none;
 }

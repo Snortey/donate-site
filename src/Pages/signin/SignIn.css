@@ -1,254 +1,249 @@
-.signin_container{
-    background: url(../../Assets/1670487955908.jpg);
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    object-fit: cover;
-    padding: 80px 100px;
-    display: flex;
-    justify-content: space-between;
+.signin_container {
+  background: url(../../Assets/1670487955908.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+  padding: 80px 100px;
+  display: flex;
+  justify-content: space-between;
 }
-.signin_container .dona{
-    font-family: 'Arimo', sans-serif;
-    font-size: 69px;
-    font-weight: 600;
-    line-height: 82.8px;
-    color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    
+.signin_container .dona {
+  font-family: "Arimo", sans-serif;
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 82.8px;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-.signin_header .signin_title{
-    font-family: 'Arimo', sans-serif;
-    font-size: 35px;
-    font-weight: 600;
-    line-height: 42px;
-    color: var(--color-black);
+.signin_header .signin_title {
+  font-family: "Arimo", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 42px;
+  color: var(--color-black);
 }
-.title_bottom h4{
-    font-family: 'Archivo', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.6px;
-    color: var(--color-black);
-}
-
-.title_bottom .create{
-    font-family: 'Archivo', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 21.6px;
-    color: var(--color-bg);
-}
-.title_bottom .create:hover{
-    color: var(--color-primary);
-    font-weight: 600;
-    transition: all 600ms ease-in-out;
-}
-.continue h4{
-    font-family: 'Archivo', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.8px;
-    color: #707070; 
+.title_bottom h4 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--color-black);
 }
 
-.signin_footer h4{
-    font-family: 'Archivo', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 21.6px;
-    color: var(--color-black); 
+.title_bottom .create {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  color: var(--color-bg);
 }
-.signin_footer .contactUs{
-    font-family: 'Archivo', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 21.6px;
-    color: var(--color-bg);
+.title_bottom .create:hover {
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: all 600ms ease-in-out;
 }
-.form_container{
-    background-color: var(--color-white);
-    width: 687px;
-    height:715px;
-    border-radius:16px ;
-    padding: 66px 58px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-.signin_header{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.continue h4 {
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: #707070;
 }
 
-.title_bottom{
-    display: flex;
-    gap: 8px;
+.signin_footer h4 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--color-black);
 }
-.signin_content{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.signin_footer .contactUs {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  color: var(--color-bg);
 }
-.input_field2{
-    position: relative;
-    width: 571px;
-    height: 54px;
-    border-radius: none;
-    background-color: none;
-    display: grid;
-    grid-template-columns: 10% 90%;
-    padding: 10px 20px;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #CCCCCC;
+.form_container-signin {
+  background-color: var(--color-white);
+  width: 687px;
+  height: 715px;
+  border-radius: 16px;
+  padding: 66px 58px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.signin_header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.input_field2 input{
-    background: none;
-    outline: none;
-    border: none;
-    text-align: left;
-    line-height: 27.6px;
-    font-family: 'Archivo', sans-serif;
-    font-size: 23px;
-    font-weight: 400;
-    color: var(--color-black);
+.title_bottom {
+  display: flex;
+  gap: 8px;
 }
-.signin_content .btn{
-    width: 571px;
-    text-align: center;
+.signin_content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.input_field2 {
+  position: relative;
+  width: 571px;
+  height: 54px;
+  border-radius: none;
+  background-color: none;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #cccccc;
+}
+
+.input_field2 input {
+  background: none;
+  outline: none;
+  border: none;
+  text-align: left;
+  line-height: 27.6px;
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+.signin_content .btn {
+  width: 571px;
+  text-align: center;
 }
 
 .continue {
-    display: flex;
-    gap: 17px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  align-items: center;
 }
-.continue .dash{
-    border: 1.5px solid #CCCCCC;
-    width: 168px;
+.continue .dash {
+  border: 1.5px solid #cccccc;
+  width: 168px;
 }
 
 .signin_footer {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 .social_icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 40px;
-    font-size: 34px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  font-size: 34px;
+  cursor: pointer;
 }
 
 .social_icons .google:hover {
-    border: 3px solid var(--color-primary);
+  border: 3px solid var(--color-primary);
 }
 .social_icons .google {
-    border-radius: 256px;
-    border: 1px solid #707070;
-    padding: 10px;
-    height: 64px;
-    width: 64px;
+  border-radius: 256px;
+  border: 1px solid #707070;
+  padding: 10px;
+  height: 64px;
+  width: 64px;
 }
 .social_icons .facebook {
-    border-radius: 256px;
-    border: 1px solid #707070;
-    color: #207af8;
-    padding: 10px;
-    height: 64px;
-    width: 64px;
+  border-radius: 256px;
+  border: 1px solid #707070;
+  color: #207af8;
+  padding: 10px;
+  height: 64px;
+  width: 64px;
 }
 .social_icons .facebook:hover {
-    border: 3px solid var(--color-primary);
+  border: 3px solid var(--color-primary);
 }
 .social_icons .apple {
-    border-radius: 256px;
-    border: 1px solid #707070;
-    color: var(--color-black);
-    padding: 10px;
-    height: 64px;
-    width: 64px;
+  border-radius: 256px;
+  border: 1px solid #707070;
+  color: var(--color-black);
+  padding: 10px;
+  height: 64px;
+  width: 64px;
 }
 .social_icons .apple:hover {
-    border: 3px solid var(--color-primary);
+  border: 3px solid var(--color-primary);
 }
 
-.contactUs:hover{
-    color: var(--color-primary);
-    font-weight: 600;
-    transition: all 600ms ease-in-out;
+.contactUs:hover {
+  color: var(--color-primary);
+  font-weight: 600;
+  transition: all 600ms ease-in-out;
 }
 
-.modal, .overlay {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    z-index: 90;
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 90;
 }
 
 .overlay {
-    background: rgba(49,49,49,0.8);
+  background: rgba(49, 49, 49, 0.8);
 }
 .modal_content {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-5%, -100%); /* Start from the far top of the screen */
-    background: var(--color-white);
-    border-radius: 16px;
-    padding: 64px 40px;
-    width: 535px;
-    height: 384px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-5%, -100%); /* Start from the far top of the screen */
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 64px 40px;
+  width: 535px;
+  height: 384px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
 }
 
 @keyframes slideDown {
-    to {
-        transform: translate(-5%, 50%); /* Final position */
-    }
+  to {
+    transform: translate(-5%, 50%); /* Final position */
+  }
 }
 
-
-
-
-
-
-.modal_top h3{
-    font-family: 'Arimo', sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 42px;
-    color: var(--color-black);
+.modal_top h3 {
+  font-family: "Arimo", sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 42px;
+  color: var(--color-black);
 }
-.modal_top h4{
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21.6px;
-    color: var(--color-black);
-    margin-top: 8px;
+.modal_top h4 {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: var(--color-black);
+  margin-top: 8px;
 }
-.modal_bottom{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.modal_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.modal_bottom .btn{
-    width: 455px;
-    text-align: center;
+.modal_bottom .btn {
+  width: 455px;
+  text-align: center;
 }

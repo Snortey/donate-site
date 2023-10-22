@@ -114,7 +114,7 @@
       align-items: start; */
 }
 .MainFirstDonation_featuredDonation-wrapper {
-  /* overflow-x: auto; Add this to enable horizontal scrolling within the wrapper */
+  position: relative;
 }
 
 .MainFirstDonation_featuredDonation {

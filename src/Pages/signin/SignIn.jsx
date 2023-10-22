@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import './SignIn.css';
-import { Link } from 'react-router-dom';
-import { BiSolidUser } from 'react-icons/bi';
-import { BiSolidLockAlt } from 'react-icons/bi';
-import { FcGoogle } from 'react-icons/fc';
-import { BsFacebook } from 'react-icons/bs';
-import { BsApple } from 'react-icons/bs';
+import React, { useState } from "react";
+import "./SignIn.css";
+import { Link } from "react-router-dom";
+import { BiSolidUser } from "react-icons/bi";
+import { BiSolidLockAlt } from "react-icons/bi";
+import { FcGoogle } from "react-icons/fc";
+import { BsFacebook } from "react-icons/bs";
+import { BsApple } from "react-icons/bs";
 
 const SignIn = () => {
   const [modal, setModal] = useState(false);
@@ -19,16 +19,16 @@ const SignIn = () => {
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay">
-            <div className="modal_content " >
+            <div className="modal_content ">
               <div className="modal_top">
                 <h3>Sign up</h3>
                 <h4>What category do you want to sign up as?</h4>
               </div>
               <div className="modal_bottom">
-                <Link to={'/usersignup'} className="btn btn-primary">
+                <Link to={"/usersignup"} className="btn btn-primary">
                   Sign up as User
                 </Link>
-                <Link to={'/organizationsignup'} className="btn">
+                <Link to={"/organizationsignup"} className="btn">
                   Sign up as Organization
                 </Link>
               </div>
@@ -36,8 +36,10 @@ const SignIn = () => {
           </div>
         </div>
       )}
-      <Link to={'/'} className='dona'>Dona.te</Link>
-      <form action="" className="form_container">
+      <Link to={"/"} className="dona">
+        Dona.te
+      </Link>
+      <form action="" className="form_container-signin">
         <div className="signin_header">
           <h3 className="signin_title">Sign in</h3>
           <div className="title_bottom">
@@ -56,7 +58,7 @@ const SignIn = () => {
             <BiSolidLockAlt />
             <input type="password" placeholder="Password" />
           </div>
-          <Link to={'/'} className="btn btn-primary">
+          <Link to={"/"} className="btn btn-primary">
             Sign in
           </Link>
         </div>
@@ -74,7 +76,7 @@ const SignIn = () => {
         </div>
         <div className="signin_footer">
           <h4>Need help signing in?</h4>
-          <Link to={'/'} className="contactUs">
+          <Link to={"/"} className="contactUs">
             Contact us
           </Link>
         </div>
