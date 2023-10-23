@@ -100,13 +100,14 @@ nav {
   border-radius: 200px;
   border: 1px solid var(--color-primary);
   padding: 8px 16px;
+  cursor: pointer;
 }
 
 .navbar_login_profile div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 .navbar_login_profile div h5 {
@@ -115,9 +116,47 @@ nav {
   line-height: 27.6px;
   letter-spacing: 1px;
 }
-.arrowdown {
+.log-arrowUp {
   width: 28px;
   font-size: 40px;
+}
+.log-arrowDown {
+  width: 28px;
+  font-size: 40px;
+}
+
+.log_dropDown-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 283px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+  background-color: var(--color-light);
+  transition: all 600ms ease;
+  padding: 1rem 0;
+  border-radius: 200px;
+  cursor: pointer;
+}
+.log_dropDown-list:hover {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+}
+.dropdown_item {
+  font-family: "Arimo", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27.6px;
+  letter-spacing: 1px;
+}
+
+.dropdown_item:hover {
+  color: var(--color-bg);
+  font-weight: 600;
+  font-size: 20px;
 }
 /* MEDIUM AND SMALL SCREENS */
 

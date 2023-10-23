@@ -1,0 +1,70 @@
+.FundraiserProfile {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 65px 112px;
+  margin-top: 100px;
+  /* display: flex; */
+}
+
+.FundraiserProfile_image img {
+  width: 276px;
+  height: 220px;
+  border-radius: 16px;
+}
+.FundraiserProfile_top {
+  width: 378px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.FundraiserProfile_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FundraiserProfile_title h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33.6px;
+  text-align: center;
+}
+
+.FundraiserProfile_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+}
+.FundraiserProfile_buttons-down {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.FundraiserProfile_buttons-down h4 {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 27.6px;
+  text-align: center;
+}
+.FundraiserProfile_bottom p {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+}
+
+.about-btn.active,
+.posts-btn.active {
+  border-bottom: 3px solid #000000;
+  padding-bottom: 5px;
+}

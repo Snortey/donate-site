@@ -3,9 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import { links } from "../data";
 import { FaBars } from "react-icons/fa";
-import { MdOutlineClose } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
-import IMG from "./../Assets/photo_2023-07-07_22-47-25.jpg";
+import {
+  MdOutlineClose,
+  MdKeyboardArrowUp,
+  MdKeyboardArrowDown,
+} from "react-icons/md";
+import IMG from "../Assets/photo_2023-07-07_22-47-25.jpg";
 
 const profiledata = [
   {
@@ -17,6 +20,11 @@ const profiledata = [
 
 const LoginNavbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
 
   return (
     <nav className="navbar">
@@ -35,21 +43,30 @@ const LoginNavbar = () => {
               </NavLink>
             </li>
           ))}
-          <div className="navbar_login_profile">
+          <div className="navbar_login_profile" onClick={toggleDropdown}>
             {profiledata.map(({ id, nameperson, profileimg }, index) => (
               <div key={id}>
                 <img src={profileimg} alt="" />
                 <h5>{nameperson}</h5>
+
                 <div className="dropdown">
-                  <IoIosArrowDown className="arrowdown" />
-                  <Link to="/" className="dropdown_item">
-                    Logout
-                  </Link>
+                  {isDropdownOpen ? (
+                    <MdKeyboardArrowUp className="log-arrowUp" />
+                  ) : (
+                    <MdKeyboardArrowDown className="log-arrowDown" />
+                  )}
                 </div>
               </div>
             ))}
           </div>
         </ul>
+        {isDropdownOpen && (
+          <div className="log_dropDown-list">
+            <Link to="/" className="dropdown_item">
+              Logout
+            </Link>
+          </div>
+        )}
         <div
           className="nav_toggle-btn"
           onClick={() => setIsNavShowing((prev) => !prev)}

@@ -166,13 +166,13 @@
 
 .fundraiser_filter-section-down {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 /* When filtering is not active, use a 2-column grid */
 .filter_item-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
   cursor: pointer;
 }
 
@@ -180,8 +180,7 @@
 .filter_item-container.filtered {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  gap: 30px;
+  gap: 20px;
 }
 
 .hidden {

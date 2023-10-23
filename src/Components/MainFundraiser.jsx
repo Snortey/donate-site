@@ -15,60 +15,97 @@ import IMG7 from "../Assets/photo_2023-07-07_22-47-29.jpg";
 import IMG8 from "../Assets/photo_2023-07-07_22-47-18.jpg";
 import IMG9 from "../Assets/1670487955908.jpg";
 
+// edit this section to insert the data for both fundraiser and FundraiserProfile page dont touch the main code
 const data = [
   {
     id: 1,
     organizationName: "Life4Kids Charity Organization",
     image: IMG1,
     organizationType: "Non-profit",
+    aboutText:
+      "Life4Kids is a dedicated and passionate non-profit organization committed to making a meaningful difference in the lives of children and their families. Our mission is to provide essential support, resources, and opportunities that empower children to lead healthier, happier, and more fulfilled lives. At Life4Kids, we envision a world where every child has the chance to thrive, regardless of their circumstances. We believe in the transformative power of collective kindness and compassion, and we work tirelessly to create a brighter future for the next generation.",
+    postText:
+      "Join us in our mission to create a positive change in the lives of people in our community. Together, we can make a difference.",
   },
   {
     id: 2,
     organizationName: "Life4Kids Charity Organization",
     image: IMG2,
     organizationType: "Agency",
+    aboutText:
+      "We are a passionate group of individuals working together to make a positive impact on our community. Our mission is to support those in need and create a brighter future for everyone.",
+    postText:
+      "Join us in our mission to create a positive change in the lives of people in our community. Together, we can make a difference.",
   },
   {
     id: 3,
     organizationName: "UNICEF",
     image: IMG3,
     organizationType: "Organization",
+    aboutText:
+      "Our organization is dedicated to promoting education and empowering the youth. We believe that knowledge is the key to a better future.",
+    postText:
+      "Education is a powerful tool for change. Let's work together to provide young minds with the opportunity to learn and grow.",
   },
   {
     id: 4,
     organizationName: "UNICEF",
     image: IMG4,
     organizationType: "Agency",
+    aboutText:
+      "We are committed to environmental conservation and sustainability. Our goal is to protect the planet for future generations.",
+    postText:
+      "Every small step towards sustainability matters. Join us in our efforts to preserve the beauty of our planet.",
   },
   {
     id: 5,
     organizationName: "UNICEF",
     image: IMG5,
     organizationType: "Agency",
+    aboutText:
+      "Health and wellness are our top priorities. We provide essential healthcare services to those in need.",
+    postText:
+      "Your health is your wealth. Let's ensure that everyone has access to the care they deserve.",
   },
   {
     id: 6,
     organizationName: "UNICEF",
     image: IMG6,
     organizationType: "Agency",
+    aboutText:
+      "We are advocates for animal rights and welfare. Our organization works to ensure that animals are treated with compassion and respect.",
+    postText:
+      "Animals deserve our care and protection. Join us in our mission to make the world a better place for all creatures.",
   },
   {
     id: 7,
     organizationName: "UNICEF",
     image: IMG7,
     organizationType: "Organization",
+    aboutText:
+      "We support artists and creatives in their pursuit of self-expression. Art has the power to inspire and transform lives.",
+    postText:
+      "Art has the ability to touch hearts and change perspectives. Let's support the arts and nurture creativity.",
   },
   {
     id: 8,
     organizationName: "UNICEF",
     image: IMG8,
     organizationType: "Non-profit",
+    aboutText:
+      "Our organization focuses on community development and empowerment. We believe in the strength of unity and collaboration.",
+    postText:
+      "Together, we can build stronger and more vibrant communities. Join us in our journey towards positive change.",
   },
   {
     id: 9,
     organizationName: "UNICEF",
     image: IMG9,
     organizationType: "Non-profit",
+    aboutText:
+      "We are champions of social justice and equality. Our goal is to create a more inclusive and fair society for all.",
+    postText:
+      "Injustice anywhere is a threat to justice everywhere. Let's stand up for what is right and work towards equality.",
   },
 ];
 
@@ -241,11 +278,6 @@ const MainFundraiser = () => {
               </article>
             )}
           </div>
-
-          <div className="filter_content">
-            <div className="filter_content-left"></div>
-            <div className="filter_content-right"></div>
-          </div>
         </div>
         <div className="fundraiser_filter-section-down">
           {/* Conditionally render the left section based on filtering */}
@@ -289,28 +321,46 @@ const MainFundraiser = () => {
                 ? filteredItems.map((item, index) => {
                     const typeClass = item.organizationType.toLowerCase();
                     return (
-                      <div
-                        className={`filter_item-list ${typeClass}`}
-                        key={index}
+                      <Link
+                        to={`/fundraiserprofile/${
+                          item.id
+                        }?name=${encodeURIComponent(
+                          item.organizationName
+                        )}&image=${encodeURIComponent(
+                          item.image
+                        )}&about=${encodeURIComponent(
+                          item.aboutText
+                        )}&post=${encodeURIComponent(item.postText)}`}
                       >
-                        <img src={item.image} alt="" />
-                        <small>{item.organizationType}</small>
-                        <h3>{item.organizationName}</h3>
-                      </div>
+                        <div className={`filter_item-list ${typeClass}`}>
+                          <img src={item.image} alt="" />
+                          <small>{item.organizationType}</small>
+                          <h3>{item.organizationName}</h3>
+                        </div>
+                      </Link>
                     );
                   })
                 : // When no search or filter is active, display 4 items in a row
                   data.slice(0, 4).map((item, index) => {
                     const typeClass = item.organizationType.toLowerCase();
                     return (
-                      <div
-                        className={`filter_item-list ${typeClass}`}
-                        key={index}
+                      <Link
+                        to={`/fundraiserprofile/${
+                          item.id
+                        }?name=${encodeURIComponent(
+                          item.organizationName
+                        )}&image=${encodeURIComponent(
+                          item.image
+                        )}&about=${encodeURIComponent(
+                          item.aboutText
+                        )}&post=${encodeURIComponent(item.postText)}`}
                       >
-                        <img src={item.image} alt="" />
-                        <small>{item.organizationType}</small>
-                        <h3>{item.organizationName}</h3>
-                      </div>
+                        <div className={`filter_item-list ${typeClass}`}>
+                          <img src={item.image} alt="" />
+                          <small>{item.organizationType}</small>
+                          <h3>{item.organizationName}</h3>
+                        </div>
+                      </Link>
                     );
                   })}
             </article>

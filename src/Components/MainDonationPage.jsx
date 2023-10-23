@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import DonateImage from "../Assets/1670487959827 (1).jpg";
-import DonateProfile from "../Assets/photo_2023-07-07_22-47-15.jpg";
 import IMG1 from "../Assets/1670487955908.jpg";
 import IMG2 from "../Assets/1670487955908.jpg";
 import IMG3 from "../Assets/1670487955908.jpg";
@@ -64,8 +63,19 @@ const commentdata = [
 ];
 
 const MainDonationPage = () => {
-  const [targetAmount] = useState(400000); // Set the target amount here
-  const [gatheredAmount] = useState(200000); // and the amount donated so far goes here
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const organizationname = searchParams.get("name");
+  const heading = searchParams.get("heading");
+  const image = searchParams.get("image");
+  const date = searchParams.get("date");
+  const avatar = searchParams.get("avatar");
+  const description = searchParams.get("description");
+  const AmountWanted = searchParams.get("targetAmount");
+  const raisedAmount = searchParams.get("raisedAmount");
+
+  const [targetAmount] = useState(AmountWanted); // Set the target amount here
+  const [gatheredAmount] = useState(raisedAmount); // and the amount donated so far goes here
   const [filled, setFilled] = useState(0);
 
   useEffect(() => {
@@ -152,33 +162,16 @@ const MainDonationPage = () => {
       )}
       <div className="MainDonationPage_left">
         <div className="MainDonationPage_left-header">
-          <h2>Christmas for children</h2>
+          <h2>{heading}</h2>
           <div className="MainDonation_profile">
-            <img src={DonateProfile} alt="" />
-            <h4>Ashakale Foundation</h4>
-            <h5>3rd July, 2023</h5>
+            <img src={avatar} alt="" />
+            <h4>{organizationname}</h4>
+            <h5>{date}</h5>
           </div>
           <div className="MainDonationPage_Image">
-            <img src={DonateImage} alt="" />
+            <img src={image} alt="" />
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Augue cras ullamcorper
-            aliquet egestas mollis facilisi aliquam. Mattis nunc at in ut
-            integer ornare urna in. Amet egestas diam eget eget feugiat
-            pellentesque duis velit. Massa adipiscing eu sapien sollicitudin at
-            facilisi ullamcorper massa. Morbi pulvinar convallis gravida
-            dictumst amet ut. Adipiscing donec mi dolor sit. Laoreet sed libero
-            bibendum commodo urna sociis et. Ut arcu aliquet adipiscing
-            sollicitudin magnis egestas scelerisque vitae risus. Donec eget nunc
-            imperdiet pretium ut dictumst. Auctor felis feugiat malesuada nisl
-            sed. Cursus viverra viverra urna sit. Eu feugiat vitae id
-            scelerisque neque. Et semper aenean semper diam netus eget massa
-            urna purus. Ut adipiscing auctor donec vel nibh at. Sollicitudin
-            ullamcorper donec nibh turpis dictum sodales pharetra. Pulvinar elit
-            sed lacus facilisis sem nulla. Viverra eu ullamcorper adipiscing
-            scelerisque etiam quam auctor vel. Amet nibh fringilla tristique
-            diam aliquam a ut. Dictum elementum ultricies nec mattis sit eu.
-          </p>
+          <p>{description}</p>
           <div className="MainDonationPage_buttons">
             <button onClick={toggleModal} className="btn btn-primary">
               Donate
