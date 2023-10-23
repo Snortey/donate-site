@@ -156,7 +156,7 @@ const MainDonationPage = () => {
       {modal && (
         <div onClick={toggleModal} className="modal-overlay">
           <div ref={modalRef} className="modal__content">
-            <DonalModal />
+            <DonalModal title={organizationname} heading={heading} />
           </div>
         </div>
       )}

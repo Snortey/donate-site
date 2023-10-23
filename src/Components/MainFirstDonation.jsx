@@ -55,8 +55,8 @@ const data = [
     text: "Help young people achieve their dreams and build a brighter future.",
     description:
       "Our program focuses on mentoring and providing educational opportunities to empower the youth in our community. Your support can change lives. We understand that young people are the future, and it's our responsibility to help them reach their full potential. The Youth Success Initiative offers mentorship, scholarships, and skill-building programs to guide them towards a brighter future. Our goal is to ensure that every young person in our community has access to quality education and the support they need to achieve their dreams. With your contributions, you're investing in the leaders, innovators, and changemakers of tomorrow.",
-    targetAmount: "990000000",
-    raisedAmount: "300000",
+    targetAmount: "99000000",
+    raisedAmount: "3000000",
   },
   {
     id: 4,

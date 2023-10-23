@@ -58,7 +58,7 @@ const paymentOptiondata = [
   },
 ];
 
-const DonalModal = () => {
+const DonalModal = ({ title, heading }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [inputFields, setInputFields] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -99,6 +99,8 @@ const DonalModal = () => {
     setIsModalOpen(false);
   };
 
+  const [validAmount, setValidAmount] = useState("");
+
   return (
     isModalOpen && (
       <div className="Donation_modal">
@@ -107,12 +109,11 @@ const DonalModal = () => {
         </span>
         <div className="donal_modal-header">
           <h4>
-            Donate to fund{" "}
-            <span className="foundationGroup">Christmas for Children</span>
+            Donate to fund <span className="foundationGroup">{heading}</span>
           </h4>
           <p>
             This donation is organized by{" "}
-            <span className="foundationName">Ashakale Foundation</span>.
+            <span className="foundationName">{title}</span>.
           </p>
         </div>
         <form action="" className="money_form">
@@ -123,10 +124,13 @@ const DonalModal = () => {
               <input
                 type="text"
                 placeholder="5.00"
-                pattern="\d+\.\d{2}"
-                title="Please enter a valid amount with two decimal places (e.g., 5.00)"
-                inputMode="numeric"
-                step="0.01"
+                value={validAmount}
+                onInput={(event) => {
+                  const inputValue = event.target.value;
+                  // Use a regular expression to keep only numeric values and a single period
+                  const numericInput = inputValue.replace(/[^0-9.]/g, "");
+                  setValidAmount(numericInput);
+                }}
                 className="amount-input"
               />
             </div>
@@ -167,6 +171,43 @@ const DonalModal = () => {
                                 type={field.type}
                                 placeholder={field.placeholder}
                                 className="custom-input"
+                                onKeyDown={(event) => {
+                                  if (
+                                    (field.placeholder === "Card Number" ||
+                                      field.placeholder === "CVV") &&
+                                    !/^[0-9]$/.test(event.key) &&
+                                    event.key !== "Backspace"
+                                  ) {
+                                    event.preventDefault();
+                                  }
+
+                                  if (
+                                    field.placeholder === "Phone Number" &&
+                                    event.key !== "+" && // Allow "+" character
+                                    !/^[0-9]$/.test(event.key) &&
+                                    event.key !== "Backspace"
+                                  ) {
+                                    event.preventDefault();
+                                  }
+
+                                  // Limit the length to 3 for CVV
+                                  if (
+                                    field.placeholder === "CVV" &&
+                                    event.target.value.length >= 3 &&
+                                    event.key !== "Backspace"
+                                  ) {
+                                    event.preventDefault();
+                                  }
+
+                                  // Limit the length to 16 for Card Number
+                                  if (
+                                    field.placeholder === "Card Number" &&
+                                    event.target.value.length >= 16 &&
+                                    event.key !== "Backspace"
+                                  ) {
+                                    event.preventDefault();
+                                  }
+                                }}
                               />
                             )}
                           </div>

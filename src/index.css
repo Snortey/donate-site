@@ -47,7 +47,7 @@ body {
   background: var(--color-light);
   color: var(--color-bg);
   line-height: 1.7;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* .container {
