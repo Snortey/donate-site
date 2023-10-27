@@ -1,64 +1,93 @@
-.profile_container{
-    display: flex;
-    margin-top: 20px;
+.profile_container {
+  display: flex;
+  margin-top: 20px;
 }
 
-.profile_image{
-    position: relative;
-    margin-right: -20px;
-    z-index: 1;
+.profile_image {
+  position: relative;
+  margin-right: -20px;
+  z-index: 1;
 }
-.profile_image:nth-child(1) { /* Remove the margin for the first image */
-    z-index: 6; /* Ensure the first image is above the others */
+.profile_image:nth-child(1) {
+  /* Remove the margin for the first image */
+  z-index: 6; /* Ensure the first image is above the others */
 }
-.profile_image:nth-child(2) { /* Remove the margin for the first image */
-    z-index: 5; /* Ensure the first image is above the others */
+.profile_image:nth-child(2) {
+  /* Remove the margin for the first image */
+  z-index: 5; /* Ensure the first image is above the others */
 }
-.profile_image:nth-child(3) { /* Remove the margin for the first image */
-    z-index: 4; /* Ensure the first image is above the others */
+.profile_image:nth-child(3) {
+  /* Remove the margin for the first image */
+  z-index: 4; /* Ensure the first image is above the others */
 }
-.profile_image:nth-child(4) { /* Remove the margin for the first image */
-    z-index: 3; /* Ensure the first image is above the others */
+.profile_image:nth-child(4) {
+  /* Remove the margin for the first image */
+  z-index: 3; /* Ensure the first image is above the others */
 }
-.profile_image:nth-child(5) { /* Remove the margin for the first image */
-    z-index: 2; /* Ensure the first image is above the others */
+.profile_image:nth-child(5) {
+  /* Remove the margin for the first image */
+  z-index: 2; /* Ensure the first image is above the others */
 }
-.profile_image:nth-child(6) { /* Remove the margin for the first image */
-    z-index: 1; /* Ensure the first image is above the others */
-}
-
-
-.profile_image img{
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    width: 52px;
-    height: 52px;
-    border-radius: 12rem;
-    border: 2px solid #63BFAD;
-    background-color: var(--color-light);
-    
-}
-.link{
-    display: flex;
-    margin-left: 30px;
-    justify-content: center;
-    align-items: center ;
-    gap: 15px;
+.profile_image:nth-child(6) {
+  /* Remove the margin for the first image */
+  z-index: 1; /* Ensure the first image is above the others */
 }
 
-.link .linksign{
-    font-family: 'Archivo', sans-serif;
-    font-size: 23px;
-    font-weight: 500;
-    line-height: 27.6px;
-    color: var( --color-bg);
+.profile_image img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 52px;
+  height: 52px;
+  border-radius: 12rem;
+  border: 2px solid #63bfad;
+  background-color: var(--color-light);
+}
+.link {
+  display: flex;
+  margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-.link .linksign:hover{
-    color: var(--color-primary);
+.link .linksign {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 27.6px;
+  color: var(--color-bg);
 }
 
-.arrow-icon{
-    width: 40px;
-    font-size: 40px;
+.link .linksign:hover {
+  color: var(--color-primary);
+}
+
+.arrow-icon {
+  width: 40px;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .profile_container {
+    margin-top: 2px;
+  }
+
+  .profile_image img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .link {
+    margin-left: 25px;
+    gap: 5px;
+  }
+
+  .link .linksign {
+    font-size: 18px;
+    line-height: 18.6px;
+  }
+  .arrow-icon {
+    width: 25px;
+    font-size: 25px;
+  }
 }

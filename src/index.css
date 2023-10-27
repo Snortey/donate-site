@@ -138,8 +138,12 @@ img {
 }
 
 /*Media Query (small devices)*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   /* .container{
         width: var(--container-width-sm);
     } */
+
+  .btn {
+    padding: 16px 24px;
+  }
 }

@@ -13,6 +13,8 @@ import UserSignUp from "./Pages/usersignup/UserSignUp";
 import LoginNavbar from "./Components/LoginNavbar";
 import FirstDonation from "./Pages/feed/FirstDonation";
 import FundraiserProfile from "./Pages/fundraiserProfile/FundraiserProfile";
+// import { AuthProvider } from "./Components/Authentication/AuthContext";
+// import { AuthRenderer } from "./Components/Authentication/AuthRenderer";
 
 const App = () => {
   return (

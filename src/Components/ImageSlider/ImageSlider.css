@@ -1,57 +1,76 @@
-
 .carousel_wrapper {
-    display: flex;
-    width: 732px;
-    position: relative;
-    height: 528px;
-    gap: 24px;
-    overflow: hidden; 
+  display: flex;
+  width: 732px;
+  position: relative;
+  height: 528px;
+  gap: 24px;
+  overflow: hidden;
 }
 
 .carousel_card {
-    width: 50px;
-    height: 500px; 
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 24px;
-    overflow: hidden;
-    user-select: none;
-    pointer-events: none;
-    transition: all 700ms ease;
-    cursor: pointer;
-    z-index: 1; 
-
+  width: 50px;
+  height: 500px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 24px;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: none;
+  transition: all 700ms ease;
+  cursor: pointer;
+  z-index: 1;
 }
 .carousel_card .carousel_text {
-    opacity: 0;
+  opacity: 0;
 }
 
 .carousel_card-active {
-    pointer-events: auto; 
-    width: 584px; 
-    height: 500px;
-    z-index: 2; 
+  pointer-events: auto;
+  width: 584px;
+  height: 500px;
+  z-index: 2;
 }
 .carousel_card-active .carousel_text {
-    opacity: 1;
+  opacity: 1;
 }
 .carousel_image {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
 .carousel_text {
-    color: var(--color-white);
-    font-family: 'Arimo', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 33.6px;
-    position: absolute;
-    bottom: 20px; 
-    left: 20px; 
-    right: 20px; 
+  color: var(--color-white);
+  font-family: "Arimo", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33.6px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 600px) {
+  .carousel_wrapper {
+    width: unset;
+    height: 410px;
+    gap: 10px;
+  }
+
+  .carousel_card {
+    height: 390px;
+  }
+  .carousel_card-active {
+    width: 390px;
+    height: 390px;
+  }
+
+  .carousel_text {
+    font-size: 18px;
+    line-height: 18.6px;
+  }
 }
