@@ -20,7 +20,7 @@ const MainHeader = () => {
             <Link to={"/createfund"} className="btn btn-primary">
               Create fund
             </Link>
-            <Link to={"/donations"} className="btn">
+            <Link to={"/feed"} className="btn">
               {" "}
               Donate
             </Link>

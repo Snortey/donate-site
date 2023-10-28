@@ -57,16 +57,16 @@
 @media screen and (max-width: 600px) {
   .carousel_wrapper {
     width: unset;
-    height: 410px;
+    height: 280px;
     gap: 10px;
   }
 
   .carousel_card {
-    height: 390px;
+    height: auto;
   }
   .carousel_card-active {
     width: 390px;
-    height: 390px;
+    height: auto;
   }
 
   .carousel_text {

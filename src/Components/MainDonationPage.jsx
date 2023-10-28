@@ -77,6 +77,17 @@ const MainDonationPage = () => {
   const [targetAmount] = useState(AmountWanted); // Set the target amount here
   const [gatheredAmount] = useState(raisedAmount); // and the amount donated so far goes here
   const [filled, setFilled] = useState(0);
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  // Function to handle "Read More" click
+  const handleReadMoreClick = () => {
+    setShowFullDescription(true);
+  };
+
+  // Function to handle "Read Less" click
+  const handleReadLessClick = () => {
+    setShowFullDescription(false);
+  };
 
   useEffect(() => {
     if (gatheredAmount > 0 && targetAmount > 0) {
@@ -141,22 +152,39 @@ const MainDonationPage = () => {
 
     // Toggle body scroll and MainDonationPage_container position
     if (!modal) {
-      document.body.classList.add("modal-open"); // Add a class to disable scrolling
+      // document.body.classList.add("modal-open"); // Add a class to disable scrolling
       document.querySelector(".MainDonationPage_container").style.position =
         "fixed"; // Fix the background
     } else {
-      document.body.classList.remove("modal-open"); // Remove the class to enable scrolling
+      // document.body.classList.remove("modal-open"); // Remove the class to enable scrolling
       document.querySelector(".MainDonationPage_container").style.position =
         "relative"; // Reset the background position
     }
   };
 
+  const handleModalOverlayClick = () => {
+    // Close the modal overlay when clicking outside the modal content
+    setModal(false);
+
+    // Toggle body scroll and MainDonationPage_container position
+    document.body.classList.remove("modal-open");
+    document.querySelector(".MainDonationPage_container").style.position =
+      "relative";
+  };
+
   return (
     <section className="MainDonationPage_container">
       {modal && (
-        <div onClick={toggleModal} className="modal-overlay">
-          <div ref={modalRef} className="modal__content">
-            <DonalModal title={organizationname} heading={heading} />
+        <div className="modal-overlay" onClick={handleModalOverlayClick}>
+          <div
+            ref={modalRef}
+            className={`modal__content ${modal ? "active" : ""}`}
+          >
+            <DonalModal
+              title={organizationname}
+              heading={heading}
+              close={toggleModal}
+            />
           </div>
         </div>
       )}
@@ -165,13 +193,32 @@ const MainDonationPage = () => {
           <h2>{heading}</h2>
           <div className="MainDonation_profile">
             <img src={avatar} alt="" />
-            <h4>{organizationname}</h4>
-            <h5>{date}</h5>
+            <div className="name_time">
+              <h4>{organizationname}</h4>
+              <h5>{date}</h5>
+            </div>
           </div>
           <div className="MainDonationPage_Image">
             <img src={image} alt="" />
+            <button onClick={toggleModal} className="btn btn-primary">
+              Donate
+            </button>
           </div>
-          <p>{description}</p>
+          <p>
+            {showFullDescription ? description : description.slice(0, 800)}
+            {!showFullDescription && description.length > 800 && (
+              <>
+                <span>...</span>
+                <button onClick={handleReadMoreClick}>Read More</button>
+              </>
+            )}
+            {showFullDescription && (
+              <>
+                {/* Display "Read Less" if showing the full description */}
+                <button onClick={handleReadLessClick}>Read Less</button>
+              </>
+            )}
+          </p>
           <div className="MainDonationPage_buttons">
             <button onClick={toggleModal} className="btn btn-primary">
               Donate
@@ -180,6 +227,48 @@ const MainDonationPage = () => {
               {" "}
               Share
             </button>
+          </div>
+        </div>
+        <div className="MainDonationPage_right2">
+          <div className="MainDonationPage_summary">
+            <h3>Summary</h3>
+            <div className="summary_container">
+              <div className="summary_progressbar" data-percent={`${filled}%`}>
+                <div
+                  className="summary_progress"
+                  style={{ width: `${filled}%` }}
+                ></div>
+              </div>
+              <div className="summary_target">
+                <h4>Target Amount:</h4>
+                <h3>${targetAmount}</h3>
+              </div>
+              <div className="summary_amount">
+                <h4>Amount Gathered:</h4>
+                <h3>${gatheredAmount}</h3>
+              </div>
+            </div>
+            <div className="summary_button">
+              <button onClick={toggleModal} className="btn btn-primary">
+                Donate
+              </button>
+            </div>
+          </div>
+          <div className="MainDonationPage_contact-organizers">
+            <h3>Contact organizers</h3>
+            <div className="contact_organizer_buttons">
+              <a href="tel:+233551992992" className="btn btn-primary">
+                Call
+              </a>{" "}
+              {/*change the number */}
+              <Link
+                to={`mailto:kelviinnoorofyy@gmail.com`}
+                alt=""
+                className="btn"
+              >
+                Mail
+              </Link>
+            </div>
           </div>
         </div>
         <div className="MainDonationPage_left-footer">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
+import { IoFilter } from "react-icons/io5";
 import { BiSliderAlt } from "react-icons/bi";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -197,6 +198,10 @@ const MainFundraiser = () => {
               type="organizationType"
               placeholder="Search"
               onChange={(e) => setSearch(e.target.value)}
+            />
+            <IoFilter
+              className="fundraiser_input_icon-filter"
+              onClick={toggleFilter}
             />
           </div>
         </form>

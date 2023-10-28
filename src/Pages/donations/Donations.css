@@ -39,8 +39,15 @@
   font-family: "Archivo", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 16.8px;
   color: #707070;
+  margin-left: 20px;
+  display: flex;
+  justify-items: end;
+}
+.name_time {
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
 }
 .MainDonationPage_Image {
   padding: 20px 0;
@@ -64,6 +71,9 @@
   margin-top: 15px;
 }
 
+.MainDonationPage_Image .btn {
+  display: none;
+}
 .MainDonationPage_buttons {
   display: flex;
   justify-content: space-between;
@@ -279,6 +289,18 @@
   -webkit-animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
   animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
+.MainDonationPage_left-header p {
+}
+.MainDonationPage_left-header p button {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(106, 106, 106);
+}
+.MainDonationPage_left-header p button:hover {
+  color: #1abc9c;
+  border-bottom: 2px solid #149279;
+}
 @-webkit-keyframes animate {
   100% {
     -webkit-transform: scaleX(1);
@@ -303,21 +325,276 @@
   align-items: center;
   z-index: 1000;
 }
-.modal-open {
-  /* overflow: hidden; */
-}
+
 .MainDonationPage_container.modal-open {
   position: fixed;
-  /* overflow: hidden; */
 }
 .modal__content {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-75%, -50%);
+  right: 0;
+  transform: translate(-25%, -50%);
   z-index: 1001;
-
+  width: 100%;
   /* Add styles specific to the modal content here */
   height: 130%; /* Adjust the maximum height as needed */
   overflow: auto;
+}
+.MainDonationPage_right2 {
+  display: none;
+}
+
+/*Media Query for tablet (medium devices)*/
+@media screen and (max-width: 1024px) {
+  .MainDonationPage_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .MainDonationPage_Image {
+    width: 100%;
+  }
+  .MainDonationPage_Image img {
+    width: 100%;
+  }
+  .MainDonationPage_right2 {
+    gap: 25px;
+    display: grid;
+    padding: 20px 0;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid #707070;
+  }
+  .MainDonationPage_right {
+    display: none;
+  }
+  .modal__content {
+    position: relative;
+    top: 80%;
+    left: 40%;
+    right: 0;
+    transform: translate(-25%, -50%);
+    z-index: 1001;
+    width: 100%;
+    /* Add styles specific to the modal content here */
+    height: 130%; /* Adjust the maximum height as needed */
+    overflow: auto;
+  }
+}
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 768px) {
+  .MainDonationPage_container {
+    padding: 45px 20px;
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  .MainDonationPage_left-header h2 {
+    font-size: 35px;
+    line-height: 42px;
+    margin-bottom: 16px;
+  }
+
+  .MainDonation_profile {
+    gap: 10px;
+    /* margin-bottom: 20px; */
+  }
+
+  .MainDonation_profile h4 {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  .MainDonation_profile h5 {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+  .MainDonationPage_Image {
+    padding: 20px 0;
+  }
+  .MainDonationPage_Image img {
+    height: auto;
+  }
+  .MainDonationPage_Image .btn {
+    margin-top: 20px;
+    width: 100%;
+    display: list-item;
+  }
+  .MainDonationPage_left-header p {
+    font-size: 18px;
+    line-height: 21.6px;
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: 2px solid #707070;
+  }
+
+  .MainDonationPage_buttons {
+    display: none;
+  }
+  .MainDonationPage_left {
+    width: 100%;
+  }
+  .MainDonationPage_left-footer {
+    width: 100%;
+  }
+
+  .name_time {
+    display: flex;
+    flex-direction: column;
+  }
+  .name_time h5 {
+    margin-left: 0px;
+  }
+
+  .comment {
+    margin-top: 20px;
+  }
+  .comment h3 {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  .single_comment {
+    gap: 10px;
+  }
+  .comment {
+    gap: 20px;
+    width: 100%;
+  }
+  .comment_section {
+    gap: 20px;
+  }
+  .comment_profile {
+    gap: 5px;
+  }
+  .comment_profile-left {
+    gap: 5px;
+  }
+  .doticon {
+    width: 10px;
+    height: 10px;
+  }
+  .comment_content-details h4 {
+    font-size: 14px;
+    line-height: 18.1px;
+  }
+  .comment_content-details small {
+    font-size: 12px;
+    line-height: 16px;
+    color: #7b7b7b;
+  }
+
+  .comment_profile-left img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .comment_profile-right {
+    gap: 5px;
+  }
+  .wallet_icon {
+    width: 18px;
+    height: 18px;
+  }
+  .comment_profile-right span {
+    font-size: 14px;
+    line-height: 18.1px;
+  }
+  .comment_footer {
+    padding-left: 46px;
+  }
+  .comment_footer p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .comment_btn .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .MainDonationPage_summary {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    margin-bottom: 25px;
+  }
+  .MainDonationPage_summary h3 {
+    font-size: 26px;
+    line-height: 33.6px;
+  }
+  .summary_button .btn {
+    width: 100%;
+    margin-top: 12px;
+  }
+  .MainDonationPage_contact-organizers {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+  .MainDonationPage_contact-organizers h3 {
+    font-size: 26px;
+    line-height: 33.6px;
+    margin-bottom: 16px;
+  }
+
+  .contact_organizer_buttons {
+    gap: 16px;
+  }
+  .contact_organizer_buttons .btn {
+    width: 100%;
+  }
+
+  .MainDonationPage_right2 {
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 2px solid #707070;
+  }
+
+  .summary_container {
+    gap: 12px;
+  }
+
+  .summary_target h4 {
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+  }
+  .summary_target h3 {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  .summary_amount h4 {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .summary_amount h3 {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  .modal__content {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    bottom: 100%;
+    right: 0;
+    transform: translate(-50%, 10%);
+    transition: all 0.9s ease-in-out;
+    opacity: 0;
+    z-index: 100;
+    /* margin-top: 0px; */
+  }
+
+  .modal-overlay {
+    transition: opacity 0.9s ease; /* Add a transition effect to 'opacity' property */
+  }
+
+  /* Add a class to show the modal */
+  .modal__content.active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: all 0.9s ease-in-out;
+  }
 }

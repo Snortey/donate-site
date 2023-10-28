@@ -1,14 +1,13 @@
 .Donation_modal {
-  width: 898px;
-  height: 871;
-  padding: 24px 120px;
+  width: 700px;
+  height: auto;
+  padding: 24px 90px;
   background-color: var(--color-light);
   border-radius: 32px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   margin-top: 400px;
-  overflow-y: auto;
 }
 
 .donal_modal-header {
@@ -58,7 +57,7 @@
 .donal_modal-amount_field {
   border: 2px solid #cccccc;
   border-radius: 16px;
-  padding: 40px 24px;
+  padding: 24px;
   width: 100%;
   display: flex;
 }
@@ -67,9 +66,9 @@
 }
 .donal_modal-amount_field small {
   font-family: "Arimo", sans-serif;
-  font-size: 55px;
+  font-size: 44px;
   font-weight: 600;
-  line-height: 66px;
+  line-height: 52.8px;
 }
 
 .donal_modal-amount_field .amount-input {
@@ -78,9 +77,9 @@
   outline: none;
   border: none;
   font-family: "Arimo", sans-serif;
-  font-size: 55px;
+  font-size: 44px;
   font-weight: 600;
-  line-height: 66px;
+  line-height: 52.8px;
   color: var(--color-black);
   text-align: right;
 }
@@ -103,7 +102,7 @@
 .payment_radio {
   border: 2px solid #cccccc;
   border-radius: 16px;
-  padding: 40px;
+  padding: 24px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -116,8 +115,8 @@
   font-weight: 400;
   line-height: 33.6px;
   position: relative;
-  padding-left: 70px;
-  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #707070;
   cursor: pointer;
 }
@@ -195,18 +194,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   margin-top: 8px;
 }
 .debitcard {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 }
 .mobilemoney {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 .applepay {
   display: flex;
@@ -216,7 +215,7 @@
 .input-field {
   border: 2px solid #cccccc;
   border-radius: 16px;
-  padding: 19px 24px;
+  padding: 14px 20px;
   position: relative;
 }
 .input-field input {
@@ -225,9 +224,9 @@
   outline: none;
   border: none;
   font-family: "Archivo", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: 18.6px;
   color: #707070;
   text-align: left;
 }
@@ -238,18 +237,14 @@
 .debitcard .MM {
   flex: inherit;
   width: 21%;
-  padding: 19px 14px;
+  padding: 14px 12px;
 }
 .debitcard .CVV {
   flex: 1;
   width: 15%;
-  padding: 19px 14px;
+  padding: 14px 12px;
 }
-/* .debitcard .Card,
-.debitcard .MM,
-.debitcard .CVV {
-  flex: 1;
-} */
+
 .debitcard .Cardholder {
   flex-direction: column;
   width: 100%;
@@ -288,4 +283,179 @@
 }
 .payment-logo .applepay {
   width: 70px;
+}
+
+/*Media Query for tablet (medium devices)*/
+@media screen and (max-width: 1024px) {
+}
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 768px) {
+  .Donation_modal {
+    width: 100%;
+    height: auto;
+    padding: 16px 20px;
+    gap: 10px;
+  }
+
+  .donal_modal-header {
+    gap: 5px;
+  }
+  .donal_modal-header h4 {
+    font-size: 20px;
+    line-height: 20.6px;
+  }
+  .donal_modal-header h4 .foundationGroup {
+    font-size: 24px;
+    line-height: 28.6px;
+  }
+
+  .donal_modal-header p {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .donal_modal-header p .foundationName {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .donal_modal-amount {
+    gap: 5px;
+  }
+  .donal_modal-amount small {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  .donal_modal-amount_field {
+    padding: 8px 16px;
+  }
+
+  .donal_modal-amount_field small {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+
+  .donal_modal-amount_field .amount-input {
+    width: 90%;
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+  .money_form {
+    gap: 16px;
+  }
+  .donal_modal-payment {
+    gap: 5px;
+  }
+  .paymentheading {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+  .payment_radio {
+    padding: 24px;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .custom-radio {
+    font-size: 18px;
+    line-height: 21.6px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+  }
+  .custom-radio span {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+  }
+
+  .custom-radio span:after {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    right: -15%;
+  }
+  .custom-radio input[type="radio"]:checked ~ span:after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .donal_modal-footer button {
+    width: 100%;
+  }
+
+  .donal_modal-footer {
+    gap: 5px;
+  }
+
+  .input-fields {
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .debitcard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .mobilemoney {
+    gap: 8px;
+  }
+  .applepay {
+    gap: 8px;
+  }
+  .input-field {
+    padding: 10px 12px;
+  }
+  .input-field input {
+    width: 90%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18.6px;
+  }
+  .debitcard .Card {
+    flex: inherit;
+    width: 100%;
+  }
+  .debitcard .MM {
+    flex: inherit;
+    width: 50%;
+    padding: 10px 12px;
+  }
+  .debitcard .CVV {
+    flex: 1;
+    width: 50%;
+    padding: 10px 12px;
+  }
+
+  .debitcard .Cardholder {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .donal_modal-close {
+    font-size: 30px;
+  }
+
+  .payment-logo img {
+    width: 40px;
+  }
+
+  .payment-logo .voda {
+    width: 30px;
+  }
+  .payment-logo .applepay {
+    width: 55px;
+  }
+  .Donation_modal {
+    /* margin-top: 0px; */
+    transform: translate(0%, 90%);
+    transition: all 0.9s ease-in-out;
+  }
+
+  /* Add a class to show the modal */
+  .Donation_modal.active {
+    /* transform: translateY(0); */
+    opacity: 1;
+    transform: translate(0%, 0%);
+    transition: all 0.9s ease-in-out;
+  }
 }

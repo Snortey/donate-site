@@ -33,7 +33,7 @@ const FeaturedDonation = () => {
                 urna imperdiet scelerisque. Lectus ridiculus enim cursus dolor
                 amet sem massa mattis.
               </p>
-              <Link to={"/donations"} className="btn btn-primary ">
+              <Link to={"/feed"} className="btn btn-primary ">
                 {" "}
                 Donate
               </Link>
@@ -41,7 +41,7 @@ const FeaturedDonation = () => {
             <div className="featured_right">
               <img src={ContainerImage} alt="" className="featured_image" />
             </div>
-            <Link to={"/donations"} className="btn btn-primary ">
+            <Link to={"/feed"} className="btn btn-primary ">
               {" "}
               Donate
             </Link>

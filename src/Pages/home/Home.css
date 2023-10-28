@@ -620,7 +620,7 @@
     line-height: 16.8px;
   }
   .featured_image {
-    height: 302px;
+    height: auto;
   }
   /* Become a partner */
   .become_container {
@@ -645,7 +645,7 @@
 
   .become_image {
     width: 100%;
-    height: 359px;
+    height: auto;
   }
 
   .become h3 {

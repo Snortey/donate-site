@@ -103,11 +103,14 @@ const DonalModal = ({ title, heading }) => {
 
   return (
     isModalOpen && (
-      <div className="Donation_modal">
+      <div className={`Donation_modal ${isModalOpen ? "active" : ""}`}>
         <span className="donal-icon" onClick={closeModal}>
           <IoClose className="donal_modal-close" />
         </span>
-        <div className="donal_modal-header">
+        <div
+          className="donal_modal-header"
+          onClick={(event) => event.stopPropagation()}
+        >
           <h4>
             Donate to fund <span className="foundationGroup">{heading}</span>
           </h4>
@@ -116,7 +119,11 @@ const DonalModal = ({ title, heading }) => {
             <span className="foundationName">{title}</span>.
           </p>
         </div>
-        <form action="" className="money_form">
+        <form
+          action=""
+          className="money_form"
+          onClick={(event) => event.stopPropagation()}
+        >
           <div className="donal_modal-amount">
             <small>Enter amount</small>
             <div className="donal_modal-amount_field">
@@ -125,6 +132,7 @@ const DonalModal = ({ title, heading }) => {
                 type="text"
                 placeholder="5.00"
                 value={validAmount}
+                onClick={(event) => event.stopPropagation()}
                 onInput={(event) => {
                   const inputValue = event.target.value;
                   // Use a regular expression to keep only numeric values and a single period
@@ -137,7 +145,10 @@ const DonalModal = ({ title, heading }) => {
           </div>
           <div className="donal_modal-payment">
             <small className="paymentheading">Select payment method</small>
-            <div className="payment_radio">
+            <div
+              className="payment_radio"
+              onClick={(event) => event.stopPropagation()}
+            >
               {paymentOptiondata.map(({ id, actualname, name, valuetype }) => (
                 <label key={id} className="custom-radio">
                   <div className="radio-label-container">
@@ -145,6 +156,7 @@ const DonalModal = ({ title, heading }) => {
                       id={id}
                       type="radio"
                       name={name}
+                      onClick={(event) => event.stopPropagation()}
                       value={valuetype}
                       checked={selectedOption === valuetype}
                       onChange={handleOptionChange}
@@ -171,6 +183,7 @@ const DonalModal = ({ title, heading }) => {
                                 type={field.type}
                                 placeholder={field.placeholder}
                                 className="custom-input"
+                                onClick={(event) => event.stopPropagation()}
                                 onKeyDown={(event) => {
                                   if (
                                     (field.placeholder === "Card Number" ||
