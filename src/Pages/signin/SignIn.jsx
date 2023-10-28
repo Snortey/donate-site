@@ -39,22 +39,22 @@ const SignIn = () => {
       <Link to={"/"} className="dona">
         Dona.te
       </Link>
-      <form action="" className="form_container-signin">
+      <form action="" className="signin_form_container-signin">
         <div className="signin_header">
           <h3 className="signin_title">Sign in</h3>
-          <div className="title_bottom">
+          <div className="signin_title_bottom">
             <h4>New user / organization?</h4>
-            <Link onClick={toggleModal} className="create">
+            <Link onClick={toggleModal} className="signin_create">
               Create an Account
             </Link>
           </div>
         </div>
         <div className="signin_content">
-          <div className="input_field2">
+          <div className="signin_input_field2">
             <BiSolidUser />
             <input type="text" placeholder="Email / Organization email" />
           </div>
-          <div className="input_field2">
+          <div className="signin_input_field2">
             <BiSolidLockAlt />
             <input type="password" placeholder="Password" />
           </div>
@@ -62,21 +62,21 @@ const SignIn = () => {
             Sign in
           </Link>
         </div>
-        <div className="social_content">
-          <div className="continue">
-            <span className="dash"></span>
+        <div className="signin_social_content">
+          <div className="signin_continue">
+            <span className="signin_dash"></span>
             <h4>or continue with</h4>
-            <span className="dash"></span>
+            <span className="signin_dash"></span>
           </div>
-          <div className="social_icons">
-            <FcGoogle className="google" />
-            <BsFacebook className="facebook" />
-            <BsApple className="apple" />
+          <div className="signin_social_icons">
+            <FcGoogle className="signin_google" />
+            <BsFacebook className="signin_facebook" />
+            <BsApple className="signin_apple" />
           </div>
         </div>
         <div className="signin_footer">
           <h4>Need help signing in?</h4>
-          <Link to={"/"} className="contactUs">
+          <Link to={"/"} className="signin_contactUs">
             Contact us
           </Link>
         </div>

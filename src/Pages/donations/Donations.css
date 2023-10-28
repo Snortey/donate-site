@@ -334,13 +334,24 @@
   top: 50%;
   left: 50%;
   right: 0;
-  transform: translate(-25%, -50%);
+  transform: translate(-25%, 0%);
   z-index: 1001;
   width: 100%;
-  /* Add styles specific to the modal content here */
-  height: 130%; /* Adjust the maximum height as needed */
+  height: 130%;
   overflow: auto;
 }
+
+@keyframes slideUp {
+  to {
+    transform: translate(-25%, -50%); /* 47 Final position */
+  }
+}
+
+/* Add a class to show the modal */
+.modal__content.active {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
 .MainDonationPage_right2 {
   display: none;
 }
@@ -580,21 +591,20 @@
     left: 50%;
     bottom: 100%;
     right: 0;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 0%);
     transition: all 0.9s ease-in-out;
-    opacity: 0;
     z-index: 100;
     /* margin-top: 0px; */
   }
 
-  .modal-overlay {
-    transition: opacity 0.9s ease; /* Add a transition effect to 'opacity' property */
+  @keyframes slideUp {
+    to {
+      transform: translate(-50%, -49%); /* 47 Final position */
+    }
   }
 
   /* Add a class to show the modal */
   .modal__content.active {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-    transition: all 0.9s ease-in-out;
+    animation: slideUp 0.5s ease-in-out forwards;
   }
 }

@@ -25,7 +25,7 @@
   line-height: 42px;
   color: var(--color-black);
 }
-.title_bottom h4 {
+.signin_title_bottom h4 {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -33,19 +33,19 @@
   color: var(--color-black);
 }
 
-.title_bottom .create {
+.signin_title_bottom .create {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21.6px;
   color: var(--color-bg);
 }
-.title_bottom .create:hover {
+.signin_title_bottom .create:hover {
   color: var(--color-primary);
   font-weight: 600;
   transition: all 600ms ease-in-out;
 }
-.continue h4 {
+.signin_continue h4 {
   font-family: "Archivo", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -53,7 +53,7 @@
   color: #707070;
 }
 
-.signin_footer h4 {
+.signin_signin_footer h4 {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -67,7 +67,7 @@
   line-height: 21.6px;
   color: var(--color-bg);
 }
-.form_container-signin {
+.signin_form_container-signin {
   background-color: var(--color-white);
   width: 687px;
   height: 715px;
@@ -77,13 +77,13 @@
   flex-direction: column;
   gap: 40px;
 }
-.signin_header {
+.signin_signin_header {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.title_bottom {
+.signin_title_bottom {
   display: flex;
   gap: 8px;
 }
@@ -92,7 +92,7 @@
   flex-direction: column;
   gap: 40px;
 }
-.input_field2 {
+.signin_input_field2 {
   position: relative;
   width: 571px;
   height: 54px;
@@ -106,7 +106,7 @@
   border-bottom: 2px solid #cccccc;
 }
 
-.input_field2 input {
+.signin_input_field2 input {
   background: none;
   outline: none;
   border: none;
@@ -122,13 +122,13 @@
   text-align: center;
 }
 
-.continue {
+.signin_continue {
   display: flex;
   gap: 17px;
   justify-content: center;
   align-items: center;
 }
-.continue .dash {
+.signin_continue .dash {
   border: 1.5px solid #cccccc;
   width: 168px;
 }
@@ -137,7 +137,7 @@
   display: flex;
   gap: 8px;
 }
-.social_icons {
+.signin_social_icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,17 +147,17 @@
   cursor: pointer;
 }
 
-.social_icons .google:hover {
+.signin_social_icons .signin_google:hover {
   border: 3px solid var(--color-primary);
 }
-.social_icons .google {
+.signin_social_icons .signin_google {
   border-radius: 256px;
   border: 1px solid #707070;
   padding: 10px;
   height: 64px;
   width: 64px;
 }
-.social_icons .facebook {
+.signin_social_icons .signin_facebook {
   border-radius: 256px;
   border: 1px solid #707070;
   color: #207af8;
@@ -165,10 +165,10 @@
   height: 64px;
   width: 64px;
 }
-.social_icons .facebook:hover {
+.signin_social_icons .signin_facebook:hover {
   border: 3px solid var(--color-primary);
 }
-.social_icons .apple {
+.signin_social_icons .signin_apple {
   border-radius: 256px;
   border: 1px solid #707070;
   color: var(--color-black);
@@ -176,11 +176,11 @@
   height: 64px;
   width: 64px;
 }
-.social_icons .apple:hover {
+.signin_social_icons .signin_apple:hover {
   border: 3px solid var(--color-primary);
 }
 
-.contactUs:hover {
+.signin_contactUs:hover {
   color: var(--color-primary);
   font-weight: 600;
   transition: all 600ms ease-in-out;
@@ -246,4 +246,194 @@
 .modal_bottom .btn {
   width: 455px;
   text-align: center;
+}
+
+/*Media Query for tablet (medium devices)*/
+@media screen and (max-width: 1024px) {
+  .signin_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .signin_input_field2 {
+    width: 100%;
+  }
+  .signin_form_container-signin {
+    width: 100%;
+    height: auto;
+  }
+  .signin_content .btn {
+    width: 100%;
+  }
+
+  .modal_content {
+    transform: translate(
+      -50%,
+      -100%
+    ); /* Start from the far top of the screen */
+    animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
+  }
+  @keyframes slideDown {
+    to {
+      transform: translate(-50%, 110%); /* Final position */
+    }
+  }
+}
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 768px) {
+  .signin_container {
+    object-fit: cover;
+    padding: 100px 20px;
+    flex-direction: column;
+    gap: 20px;
+    /* background-size: contain;
+    background-size: 100% 100%; 
+    background-position: center; */
+  }
+  .signin_container .dona {
+    font-size: 45px;
+    line-height: 62.8px;
+  }
+  .signin_header .signin_title {
+    font-size: 35px;
+    line-height: 42px;
+  }
+  .signin_title_bottom {
+    align-items: center;
+  }
+  .signin_title_bottom h4 {
+    font-size: 12px;
+    line-height: 18.6px;
+    white-space: nowrap;
+  }
+
+  .signin_title_bottom .signin_create {
+    font-size: 12px;
+    line-height: 18.6px;
+    white-space: nowrap;
+    color: var(--color-primary);
+  }
+
+  .signin_footer h4 {
+    font-size: 14px;
+    line-height: 18.6px;
+  }
+  .signin_footer .signin_contactUs {
+    font-size: 14px;
+    line-height: 18.6px;
+  }
+  .signin_form_container-signin {
+    padding: 30px 26px;
+    gap: 20px;
+  }
+  .signin_header {
+    gap: 5px;
+  }
+
+  .signin_title_bottom {
+    display: flex;
+    gap: 8px;
+  }
+  .signin_content {
+    gap: 20px;
+    width: 100%;
+  }
+  .signin_input_field2 {
+    height: 40px;
+    display: grid;
+    padding: 10px 12px;
+  }
+
+  .signin_input_field2 input {
+    line-height: 20.6px;
+    font-size: 18px;
+  }
+  .signin_content .btn {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 20px;
+  }
+
+  .signin_continue {
+    gap: 8px;
+  }
+  .signin_continue h4 {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .signin_continue .signin_dash {
+    border: 1.5px solid #cccccc;
+    width: 168px;
+  }
+
+  .signin_footer {
+    gap: 5px;
+  }
+  .signin_social_icons {
+    gap: 12px;
+    margin-top: 10px;
+    font-size: 28px;
+  }
+
+  .signin_social_icons .signin_google {
+    padding: 5px;
+    height: 34px;
+    width: 34px;
+  }
+  .signin_social_icons .signin_facebook {
+    padding: 5px;
+    height: 34px;
+    width: 34px;
+  }
+  .signin_social_icons .signin_apple {
+    padding: 5px;
+    height: 34px;
+    width: 34px;
+  }
+
+  .modal,
+  .overlay {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 90;
+  }
+
+  .modal_content {
+    transform: translate(-50%, -50%); /* Start from the far top of the screen */
+    padding: 20px 20px;
+    width: 80%;
+    height: auto;
+    gap: 18px;
+    animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
+  }
+
+  @keyframes slideDown {
+    to {
+      transform: translate(-50%, 110%); /* Final position */
+    }
+  }
+
+  .modal_top h3 {
+    font-size: 25px;
+    line-height: 22px;
+  }
+  .modal_top h4 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 8px;
+  }
+  .modal_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .modal_bottom .btn {
+    width: 100%;
+    font-size: 20px;
+    padding: 12px 6px;
+  }
 }

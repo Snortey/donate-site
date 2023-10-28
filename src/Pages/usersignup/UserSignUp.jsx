@@ -11,34 +11,34 @@ import "./UserSignUp.css";
 
 const UserSignUp = () => {
   return (
-    <section className="signup_container">
+    <section className="User_signup_container">
       <Link to={"/"} className="dona">
         Dona.te
       </Link>
-      <form action="" className="form_container">
-        <div className="signup_header">
-          <h3 class="signup_title">Sign up</h3>
-          <div className="title_bottom">
+      <form action="" className="User_signup_form_container">
+        <div className="User_signup_header">
+          <h3 class="User_signup_title">Sign up</h3>
+          <div className="User_signup_title_bottom">
             <h4>Already existing user / organization?</h4>
-            <Link to={"/signin"} class="create">
+            <Link to={"/signin"} class="User_signup_create">
               Sign in
             </Link>
           </div>
         </div>
-        <div className="signup_content">
-          <div class="input_field2">
+        <div className="User_signup_content">
+          <div class="User_signup_input_field2">
             <BiSolidUser />
             <input type="text" placeholder="Full name" />
           </div>
-          <div class="input_field2">
+          <div class="User_signup_input_field2">
             <MdEmail />
             <input type="text" placeholder="Email" />
           </div>
-          <div class="input_field2">
+          <div class="User_signup_input_field2">
             <BiSolidLockAlt />
             <input type="password" placeholder="Password" />
           </div>
-          <div class="input_field2">
+          <div class="User_signup_input_field2">
             <BiCheckDouble />
             <input type="password" placeholder="Confirm Password" />
           </div>
@@ -46,22 +46,22 @@ const UserSignUp = () => {
             Sign up
           </Link>
         </div>
-        <div className="social_content">
-          <div className="continue">
-            <span className="dash"></span>
+        <div className="User_signup_social_content">
+          <div className="User_signup_continue">
+            <span className="User_signup_dash"></span>
             <h4>or continue with</h4>
-            <span className="dash"></span>
+            <span className="User_signup_dash"></span>
           </div>
-          <div className="social_icons">
+          <div className="User_signup_social_icons">
             {/* import social_icons here google facebook apple*/}
-            <FcGoogle className="google" />
-            <BsFacebook className="facebook" />
-            <BsApple className="apple" />
+            <FcGoogle className="User_signup_google" />
+            <BsFacebook className="User_signup_facebook" />
+            <BsApple className="User_signup_apple" />
           </div>
         </div>
-        <div className="signup_footer">
+        <div className="User_signup_footer">
           <h4>Need help signing in?</h4>
-          <Link to={"/"} className="contactUs">
+          <Link to={"/"} className="User_signup_contactUs">
             Contact us
           </Link>
         </div>
