@@ -68,3 +68,175 @@
   border-bottom: 3px solid #000000;
   padding-bottom: 5px;
 }
+/* post */
+.post_avatar img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 12rem;
+  background-color: var(--color-light);
+}
+
+.post_image {
+  margin-bottom: 10px;
+}
+.post_image img {
+  /* aspect-ratio: 1/1;
+  object-fit: cover; */
+  width: 347px;
+  height: 185px;
+  border-radius: 12px;
+}
+
+.post_avatar {
+  display: flex;
+  gap: 10px;
+}
+.post_avatar h3 {
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.8px;
+}
+.post_avatar small {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.4px;
+}
+
+.Single_post_content-container {
+  padding: 16px;
+  border-radius: 16px;
+  width: 379px;
+  height: auto;
+  background: var(--color-light);
+  z-index: 1;
+}
+.post_header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.post_Main_profile {
+  margin-bottom: 10px;
+}
+.post_Main_profile p {
+  font-family: "Archivo", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+}
+.post_content_button .btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.post_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns with equal width */
+  gap: 20px;
+}
+
+/*Media Query for tablet (medium devices)*/
+@media screen and (max-width: 1024px) {
+  .FundraiserProfile {
+    margin-top: 80px;
+  }
+  .post_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 768px) {
+  .FundraiserProfile {
+    padding: 45px 20px;
+    margin-top: 50px;
+    /* display: flex; */
+  }
+
+  .FundraiserProfile_image img {
+    width: 276px;
+    height: 220px;
+  }
+  .FundraiserProfile_top {
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .FundraiserProfile_title h2 {
+    font-size: 22px;
+    line-height: 20.6px;
+  }
+
+  .FundraiserProfile_buttons {
+    gap: 10px;
+  }
+  .FundraiserProfile_buttons .btn {
+    padding: 8px 18px;
+    font-size: 18px;
+  }
+  .FundraiserProfile_buttons-down {
+    gap: 18px;
+  }
+  .FundraiserProfile_buttons-down h4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .FundraiserProfile_bottom p {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .about-btn.active,
+  .posts-btn.active {
+    padding-bottom: 2px;
+  }
+  /* post */
+  .post_container {
+    padding: 0px 10px;
+  }
+
+  .post_image {
+    margin-bottom: 10px;
+  }
+  .post_image img {
+    width: 100%;
+    height: 185px;
+    border-radius: 12px;
+  }
+
+  .post_avatar {
+    display: flex;
+    gap: 10px;
+  }
+
+  .Single_post_content-container {
+    padding: 12px;
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    background: var(--color-light);
+    z-index: 1;
+  }
+
+  .post_content_button .btn {
+    width: 100%;
+    padding: 8px 18px;
+    font-size: 18px;
+  }
+
+  .post_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

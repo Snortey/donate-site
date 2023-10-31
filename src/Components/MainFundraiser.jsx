@@ -15,6 +15,10 @@ import IMG6 from "../Assets/photo_2023-07-07_22-47-25.jpg";
 import IMG7 from "../Assets/photo_2023-07-07_22-47-29.jpg";
 import IMG8 from "../Assets/photo_2023-07-07_22-47-18.jpg";
 import IMG9 from "../Assets/1670487955908.jpg";
+import AVATAR1 from "../Assets/photo_2023-07-07_22-47-15.jpg";
+import AVATAR2 from "../Assets/photo_2023-07-07_22-47-18.jpg";
+import AVATAR3 from "../Assets/photo_2023-07-07_22-47-25.jpg";
+import AVATAR4 from "../Assets/photo_2023-07-07_22-47-29.jpg";
 
 // edit this section to insert the data for both fundraiser and FundraiserProfile page dont touch the main code
 const data = [
@@ -25,8 +29,42 @@ const data = [
     organizationType: "Non-profit",
     aboutText:
       "Life4Kids is a dedicated and passionate non-profit organization committed to making a meaningful difference in the lives of children and their families. Our mission is to provide essential support, resources, and opportunities that empower children to lead healthier, happier, and more fulfilled lives. At Life4Kids, we envision a world where every child has the chance to thrive, regardless of their circumstances. We believe in the transformative power of collective kindness and compassion, and we work tirelessly to create a brighter future for the next generation.",
-    postText:
-      "Join us in our mission to create a positive change in the lives of people in our community. Together, we can make a difference.",
+    postDetails: [
+      // This should be an array of objects
+      {
+        id: 1,
+        postAvatar: AVATAR1,
+        postTitle: "Green Earth Initiative",
+        postMessage:
+          "Contribute to the preservation of our planet and a greener future.",
+        postImage: IMG1,
+        postTime: "1hr",
+      },
+      {
+        id: 2,
+        postAvatar: AVATAR1,
+        postTitle: "Another Initiative",
+        postMessage: "Another important message from this organization.",
+        postImage: IMG2,
+        postTime: "2hrs",
+      },
+      {
+        id: 3,
+        postAvatar: AVATAR1,
+        postTitle: "Another Initiative",
+        postMessage: "Another important message from this organization.",
+        postImage: IMG2,
+        postTime: "2hrs",
+      },
+      {
+        id: 4,
+        postAvatar: AVATAR1,
+        postTitle: "Another Initiative",
+        postMessage: "Another important message from this organization.",
+        postImage: IMG2,
+        postTime: "2hrs",
+      },
+    ],
   },
   {
     id: 2,
@@ -35,8 +73,25 @@ const data = [
     organizationType: "Agency",
     aboutText:
       "We are a passionate group of individuals working together to make a positive impact on our community. Our mission is to support those in need and create a brighter future for everyone.",
-    postText:
-      "Join us in our mission to create a positive change in the lives of people in our community. Together, we can make a difference.",
+    postDetails: [
+      {
+        id: 1,
+        postAvatar: AVATAR2,
+        postTitle: "Community Support",
+        postMessage:
+          "Join us in our mission to create a positive change in the lives of people in our community. Together, we can make a difference.",
+        postImage: IMG2,
+        postTime: "2hrs",
+      },
+      {
+        id: 2,
+        postAvatar: AVATAR1,
+        postTitle: "Another Initiative",
+        postMessage: "Another important message from this organization.",
+        postImage: IMG2,
+        postTime: "2hrs",
+      },
+    ],
   },
   {
     id: 3,
@@ -45,8 +100,16 @@ const data = [
     organizationType: "Organization",
     aboutText:
       "Our organization is dedicated to promoting education and empowering the youth. We believe that knowledge is the key to a better future.",
-    postText:
-      "Education is a powerful tool for change. Let's work together to provide young minds with the opportunity to learn and grow.",
+    postDetails: [
+      {
+        postAvatar: AVATAR3,
+        postTitle: "Education for All",
+        postMessage:
+          "Education is a powerful tool for change. Let's work together to provide young minds with the opportunity to learn and grow.",
+        postImage: IMG3,
+        postTime: "3hrs",
+      },
+    ],
   },
   {
     id: 4,
@@ -55,8 +118,16 @@ const data = [
     organizationType: "Agency",
     aboutText:
       "We are committed to environmental conservation and sustainability. Our goal is to protect the planet for future generations.",
-    postText:
-      "Every small step towards sustainability matters. Join us in our efforts to preserve the beauty of our planet.",
+    postDetails: [
+      {
+        postAvatar: AVATAR4,
+        postTitle: "Sustainability Matters",
+        postMessage:
+          "Every small step towards sustainability matters. Join us in our efforts to preserve the beauty of our planet.",
+        postImage: IMG4,
+        postTime: "4hrs",
+      },
+    ],
   },
   {
     id: 5,
@@ -65,8 +136,16 @@ const data = [
     organizationType: "Agency",
     aboutText:
       "Health and wellness are our top priorities. We provide essential healthcare services to those in need.",
-    postText:
-      "Your health is your wealth. Let's ensure that everyone has access to the care they deserve.",
+    postDetails: [
+      {
+        postAvatar: AVATAR1,
+        postTitle: "Healthy Lives, Happy Hearts",
+        postMessage:
+          "Your health is your wealth. Let's ensure that everyone has access to the care they deserve.",
+        postImage: IMG5,
+        postTime: "5hrs",
+      },
+    ],
   },
   {
     id: 6,
@@ -75,8 +154,16 @@ const data = [
     organizationType: "Agency",
     aboutText:
       "We are advocates for animal rights and welfare. Our organization works to ensure that animals are treated with compassion and respect.",
-    postText:
-      "Animals deserve our care and protection. Join us in our mission to make the world a better place for all creatures.",
+    postDetails: [
+      {
+        postAvatar: AVATAR2,
+        postTitle: "Protecting Our Animal Friends",
+        postMessage:
+          "Animals deserve our care and protection. Join us in our mission to make the world a better place for all creatures.",
+        postImage: IMG6,
+        postTime: "6hrs",
+      },
+    ],
   },
   {
     id: 7,
@@ -85,8 +172,16 @@ const data = [
     organizationType: "Organization",
     aboutText:
       "We support artists and creatives in their pursuit of self-expression. Art has the power to inspire and transform lives.",
-    postText:
-      "Art has the ability to touch hearts and change perspectives. Let's support the arts and nurture creativity.",
+    postDetails: [
+      {
+        postAvatar: AVATAR3,
+        postTitle: "Supporting the Arts",
+        postMessage:
+          "Art has the ability to touch hearts and change perspectives. Let's support the arts and nurture creativity.",
+        postImage: IMG7,
+        postTime: "7hrs",
+      },
+    ],
   },
   {
     id: 8,
@@ -95,8 +190,16 @@ const data = [
     organizationType: "Non-profit",
     aboutText:
       "Our organization focuses on community development and empowerment. We believe in the strength of unity and collaboration.",
-    postText:
-      "Together, we can build stronger and more vibrant communities. Join us in our journey towards positive change.",
+    postDetails: [
+      {
+        postAvatar: AVATAR4,
+        postTitle: "Empowering Communities",
+        postMessage:
+          "Together, we can build stronger and more vibrant communities. Join us in our journey towards positive change.",
+        postImage: IMG8,
+        postTime: "8hrs",
+      },
+    ],
   },
   {
     id: 9,
@@ -105,8 +208,16 @@ const data = [
     organizationType: "Non-profit",
     aboutText:
       "We are champions of social justice and equality. Our goal is to create a more inclusive and fair society for all.",
-    postText:
-      "Injustice anywhere is a threat to justice everywhere. Let's stand up for what is right and work towards equality.",
+    postDetails: [
+      {
+        postAvatar: AVATAR3,
+        postTitle: "Justice and Equality",
+        postMessage:
+          "Injustice anywhere is a threat to justice everywhere. Let's stand up for what is right and work towards equality.",
+        postImage: IMG9,
+        postTime: "9hrs",
+      },
+    ],
   },
 ];
 
@@ -335,7 +446,9 @@ const MainFundraiser = () => {
                           item.image
                         )}&about=${encodeURIComponent(
                           item.aboutText
-                        )}&post=${encodeURIComponent(item.postText)}`}
+                        )}&postDetails=${encodeURIComponent(
+                          JSON.stringify(item.postDetails)
+                        )}`}
                       >
                         <div className={`filter_item-list ${typeClass}`}>
                           <img src={item.image} alt="" />
@@ -358,7 +471,9 @@ const MainFundraiser = () => {
                           item.image
                         )}&about=${encodeURIComponent(
                           item.aboutText
-                        )}&post=${encodeURIComponent(item.postText)}`}
+                        )}&postDetails=${encodeURIComponent(
+                          JSON.stringify(item.postDetails)
+                        )}`}
                       >
                         <div className={`filter_item-list ${typeClass}`}>
                           <img src={item.image} alt="" />

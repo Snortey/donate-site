@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./FundraiserProfile.css";
 // import IMG1 from "../../Assets/1670487957332.jpg";
 
@@ -22,7 +22,12 @@ const FundraiserProfile = () => {
   const name = searchParams.get("name");
   const image = searchParams.get("image");
   const about = searchParams.get("about");
-  const post = searchParams.get("post");
+  // Read the postDetails query parameter and parse it to an object
+  const postDetails = JSON.parse(
+    decodeURIComponent(searchParams.get("postDetails"))
+  );
+
+  // const { postAvatar, postTitle, postMessage, postImage, postTime } = postDetails;
 
   return (
     <section className="FundraiserProfile">
@@ -54,7 +59,36 @@ const FundraiserProfile = () => {
         </div>
         <div className="FundraiserProfile_bottom">
           {activeTab === "About" && <p>{about}</p>}
-          {activeTab === "Posts" && <p>{post}</p>}
+          {/* {activeTab === "Posts" && <p>{post}</p>} */}
+          {activeTab === "Posts" && (
+            <div className="post_container">
+              {postDetails.map((post, index) => (
+                <div className="Single_post_content-container" key={index}>
+                  <div className="post-MainContent">
+                    <div className="post_Main_profile">
+                      <div className="post_avatar">
+                        <img src={post.postAvatar} alt="" />
+                        <div className="post_header">
+                          <h3>{post.postTitle}</h3>
+                          <small>{post.postTime}</small>
+                        </div>
+                      </div>
+                      <p>{post.postMessage}</p>
+                    </div>
+                    <div className="post_image">
+                      <img src={post.postImage} alt="" />
+                    </div>
+                    <div className="post_content_button">
+                      <Link to={"/"} className="btn">
+                        {" "}
+                        View post
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>
