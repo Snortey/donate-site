@@ -13,6 +13,7 @@ import UserSignUp from "./Pages/usersignup/UserSignUp";
 import LoginNavbar from "./Components/LoginNavbar";
 import FirstDonation from "./Pages/feed/FirstDonation";
 import FundraiserProfile from "./Pages/fundraiserProfile/FundraiserProfile";
+import PostFundraiser from "./Pages/postfundraiser/PostFundraiser";
 // import { AuthProvider } from "./Components/Authentication/AuthContext";
 // import { AuthRenderer } from "./Components/Authentication/AuthRenderer";
 
@@ -62,6 +63,15 @@ const App = () => {
             <>
               <LoginNavbar />
               <FundraiserProfile />
+            </>
+          }
+        />
+        <Route
+          path="postfundraiser"
+          element={
+            <>
+              <LoginNavbar />
+              <PostFundraiser />
             </>
           }
         />

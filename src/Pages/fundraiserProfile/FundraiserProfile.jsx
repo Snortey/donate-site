@@ -79,7 +79,7 @@ const FundraiserProfile = () => {
                       <img src={post.postImage} alt="" />
                     </div>
                     <div className="post_content_button">
-                      <Link to={"/"} className="btn">
+                      <Link to={"/postfundraiser"} className="btn">
                         {" "}
                         View post
                       </Link>
