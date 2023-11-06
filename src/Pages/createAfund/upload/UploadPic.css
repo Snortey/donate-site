@@ -1,0 +1,135 @@
+.upload_pic {
+  background: url(../../../Assets/1670735162569.jpg);
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  object-fit: cover;
+  /* padding: 80px 100px; */
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  /* height: 100%; */
+}
+.upload_pic-left {
+  padding: 120px 50px 120px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload_pic_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upload_pic-left h5 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #a9a9a9;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 120px;
+  z-index: 1;
+}
+.upload_pic-left h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  color: var(--color-white);
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 152px;
+  z-index: 1;
+}
+.upload_pic-right {
+  background-color: var(--color-light);
+  padding: 120px 100px 28px 100px;
+}
+.upload_pic_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.upload_pic-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upload_pic-header h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: var(--color-black);
+}
+
+.upload_pic-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 60px;
+}
+.upload_pic-button .btn {
+  padding: 16px 24px;
+  font-size: 23px;
+}
+
+.upload_pic-main-space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 383px;
+  border: 3px dashed var(--color-black);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.upload-area {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload_pic-main-space img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.upload_pic-main-space video {
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.upload_icon {
+  color: var(--color-black);
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.upload_info {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--color-black);
+}
+.upload_icon:hover {
+  color: var(--color-primary);
+}
+
+.upload_info:hover {
+  color: var(--color-primary);
+}
+.upload_pic-main-space:hover {
+  background-color: var(--color-white);
+}

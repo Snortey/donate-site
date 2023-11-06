@@ -1,0 +1,134 @@
+.reviews {
+  background: url(../../../Assets/photo_2023-07-07_22-47-15.jpg);
+  /* background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; */
+  object-fit: cover;
+  /* padding: 80px 100px; */
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  /* height: 100%; */
+}
+.reviews-left {
+  padding: 120px 50px 120px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reviews-left h5 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #a9a9a9;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 120px;
+  z-index: 1;
+}
+.reviews-left h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  color: var(--color-white);
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 152px;
+  z-index: 1;
+}
+.reviews-right {
+  background-color: var(--color-light);
+  padding: 60px 100px 28px 100px;
+}
+.upload_reviews-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 60px;
+}
+.upload_reviews-button .btn {
+  padding: 16px 24px;
+  font-size: 23px;
+}
+
+.reviews_right-header h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52.8px;
+  margin-bottom: 16px;
+  color: var(--color-black);
+}
+
+.reviews_profile {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.reviews_profile img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 12rem;
+}
+.reviews_profile h4 {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 27.6px;
+  color: var(--color-black);
+}
+.reviews_profile h5 {
+  font-family: "Archivo", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #707070;
+  margin-left: 20px;
+  display: flex;
+  justify-items: end;
+}
+.reviews_name_time {
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+}
+.reviews_Image {
+  padding: 20px 0;
+  border-top: 2px solid #707070;
+  border-bottom: 2px solid #707070;
+  width: 100%;
+}
+.reviews_Image img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100%;
+  height: 434px;
+  border-radius: 24px;
+}
+
+.reviews_right-header p {
+  font-family: "Archivo", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+  margin-top: 15px;
+  color: var(--color-black);
+}
+
+.reviews_buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #707070;
+}
+.reviews_buttons .btn {
+  width: 100%;
+  text-align: center;
+}

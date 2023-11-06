@@ -33,14 +33,15 @@
   color: var(--color-black);
 }
 
-.signin_title_bottom .create {
+.signin_title_bottom .signin_create {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21.6px;
   color: var(--color-bg);
 }
-.signin_title_bottom .create:hover {
+
+.signin_title_bottom .signin_create:hover {
   color: var(--color-primary);
   font-weight: 600;
   transition: all 600ms ease-in-out;
@@ -214,10 +215,10 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
+  animation: slideDowns 0.4s ease-in-out forwards; /* Add a 9-second delay */
 }
 
-@keyframes slideDown {
+@keyframes slideDowns {
   to {
     transform: translate(-5%, 50%); /* Final position */
   }
@@ -270,9 +271,9 @@
       -50%,
       -100%
     ); /* Start from the far top of the screen */
-    animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
+    animation: slideDowns 0.4s ease-in-out forwards; /* Add a 9-second delay */
   }
-  @keyframes slideDown {
+  @keyframes slideDowns {
     to {
       transform: translate(-50%, 110%); /* Final position */
     }
@@ -408,10 +409,10 @@
     width: 80%;
     height: auto;
     gap: 18px;
-    animation: slideDown 0.4s ease-in-out forwards; /* Add a 9-second delay */
+    animation: slideDowns 0.4s ease-in-out forwards; /* Add a 9-second delay */
   }
 
-  @keyframes slideDown {
+  @keyframes slideDowns {
     to {
       transform: translate(-50%, 110%); /* Final position */
     }

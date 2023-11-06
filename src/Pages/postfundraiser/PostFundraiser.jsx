@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./PostFundraiser.css";
 import { Link } from "react-router-dom";
 import { IoArrowBackOutline } from "react-icons/io5";
@@ -171,11 +171,11 @@ const PostFundraiser = () => {
               <div className="statistics_money">
                 <div className="statistics_target">
                   <h4>Target Amount:</h4>
-                  <h3>${statisticstargetAmount}</h3>
+                  <h3>GH₵{statisticstargetAmount}</h3>
                 </div>
                 <div className="statistics_amount">
                   <h4>Amount Gathered:</h4>
-                  <h3>${statisticsAmount}</h3>
+                  <h3>GH₵{statisticsAmount}</h3>
                 </div>
               </div>
               <div className="number-of-people">
@@ -265,11 +265,11 @@ const PostFundraiser = () => {
             <div className="statistics_money">
               <div className="statistics_target">
                 <h4>Target Amount:</h4>
-                <h3>${statisticstargetAmount}</h3>
+                <h3>GH₵{statisticstargetAmount}</h3>
               </div>
               <div className="statistics_amount">
                 <h4>Amount Gathered:</h4>
-                <h3>${statisticsAmount}</h3>
+                <h3>GH₵{statisticsAmount}</h3>
               </div>
             </div>
             <div className="number-of-people">

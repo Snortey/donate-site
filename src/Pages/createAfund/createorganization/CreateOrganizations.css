@@ -1,0 +1,117 @@
+.create_organizations {
+  background: url(../../../Assets/1670487955908.jpg);
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  object-fit: cover;
+  /* padding: 80px 100px; */
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  /* height: 100%; */
+}
+.create_organizations-left {
+  padding: 120px 50px 120px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create_organizations_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.create_organizations-left h5 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #a9a9a9;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 120px;
+  z-index: 1;
+}
+.create_organizations-left h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  color: var(--color-white);
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 152px;
+  z-index: 1;
+}
+.create_organizations-right {
+  background-color: var(--color-light);
+  padding: 120px 100px 28px 100px;
+}
+.create_organizations_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.create_organizations-set-Goals {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.create_organizations-set-Goals h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: var(--color-black);
+}
+
+.create_organizations-amount_field {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+}
+.create_organizations-amount_field:hover {
+  border-color: black; /* Change the border color to black on focus */
+}
+.create_organizations-amount_field small {
+  font-family: "Arimo", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52.8px;
+  color: var(--color-black);
+}
+
+.create_organizations-amount_field .create_organizations-amount-input {
+  width: 90%;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: "Arimo", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52.8px;
+  color: var(--color-black);
+  text-align: right;
+}
+.create_organizations-set-Goals p {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--color-black);
+}
+
+.create_organizations-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 160px;
+}
+.create_organizations-button .btn {
+  padding: 16px 24px;
+  font-size: 23px;
+}

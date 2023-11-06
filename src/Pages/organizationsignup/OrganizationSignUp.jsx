@@ -42,7 +42,7 @@ const OrganizationSignUp = () => {
             <BiCheckDouble />
             <input type="password" placeholder="Confirm Password" />
           </div>
-          <Link to={"/"} className="btn btn-primary">
+          <Link to={"/locations"} className="btn btn-primary">
             Sign up
           </Link>
         </div>

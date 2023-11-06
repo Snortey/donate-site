@@ -5,7 +5,6 @@ import Fundraiser from "./Pages/fundraiser/FundRaiser";
 import Donations from "./Pages/donations/Donations";
 import How from "./Pages/howpage/HowPage";
 import Sign from "./Pages/signin/SignIn";
-import CreateFund from "./Pages/createfund/CreateFund";
 import Error from "./Pages/notfound/NotFound";
 import Navbar from "./Components/navbar";
 import OrganizationSignUp from "./Pages/organizationsignup/OrganizationSignUp";
@@ -14,6 +13,13 @@ import LoginNavbar from "./Components/LoginNavbar";
 import FirstDonation from "./Pages/feed/FirstDonation";
 import FundraiserProfile from "./Pages/fundraiserProfile/FundraiserProfile";
 import PostFundraiser from "./Pages/postfundraiser/PostFundraiser";
+import CreateFundIndividuals from "./Pages/createAfund/createindividual/CreateIndividuals";
+import CreateFundOrganizations from "./Pages/createAfund/createorganization/CreateOrganizations";
+import UploadPic from "./Pages/createAfund/upload/UploadPic";
+import CreateDescription from "./Pages/createAfund/createdescription/CreateDescription";
+import CreateReview from "./Pages/createAfund/review/CreateReview";
+import SetLocation from "./Pages/setlocation/SetLocation";
+
 // import { AuthProvider } from "./Components/Authentication/AuthContext";
 // import { AuthRenderer } from "./Components/Authentication/AuthRenderer";
 
@@ -87,16 +93,18 @@ const App = () => {
         <Route path="signin" element={<Sign />} />
         <Route path="organizationsignup" element={<OrganizationSignUp />} />
         <Route path="usersignup" element={<UserSignUp />} />
+        <Route path="createindividuals" element={<CreateFundIndividuals />} />
         <Route
-          path="createfund"
-          element={
-            <>
-              {" "}
-              <Navbar />
-              <CreateFund />
-            </>
-          }
+          path="createorganizations"
+          element={<CreateFundOrganizations />}
         />
+        <Route path="uploadpic" element={<UploadPic />} />
+        <Route path="createdescriptions" element={<CreateDescription />} />
+        <Route path="reviews" element={<CreateReview />} />
+        <Route path="locations" element={<SetLocation />} />
+
+        {/* <Route path="createfundindividual" element={<CreateFundIndividual />} /> */}
+
         <Route
           path="*"
           element={

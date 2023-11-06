@@ -1,0 +1,141 @@
+.upload_description {
+  background: url(../../../Assets/photo_2023-07-07_22-47-15.jpg);
+  /* background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+  object-fit: cover;
+  /* padding: 80px 100px; */
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  /* height: 100%; */
+}
+.upload_description-left {
+  padding: 120px 50px 120px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload_description_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upload_description-left h5 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #a9a9a9;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 120px;
+  z-index: 1;
+}
+.upload_description-left h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  color: var(--color-white);
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 152px;
+  z-index: 1;
+}
+.upload_description-right {
+  background-color: var(--color-light);
+  padding: 120px 100px 28px 100px;
+}
+.upload_description_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.upload_description-header-title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upload_description-header-title h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: var(--color-black);
+}
+
+.upload_description-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 60px;
+}
+.upload_description-button .btn {
+  padding: 16px 24px;
+  font-size: 23px;
+}
+
+.upload_description-title {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 19px 24px;
+  width: 100%;
+  display: flex;
+}
+
+.upload_description-title:hover {
+  border: 2px solid #000000;
+}
+.upload_description-title .description-title {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: "Arimo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--color-black);
+  /* text-align: right; */
+}
+
+.upload_description-header-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upload_description-header-description h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: var(--color-black);
+}
+.upload_description-description {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 19px 24px;
+  width: 100%;
+  height: 299px;
+}
+
+.upload_description-description .description-description {
+  width: 100%;
+  height: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  resize: none;
+  overflow: auto;
+  font-family: "Arimo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--color-black);
+}
+.upload_description-description:hover {
+  border: 2px solid #000000;
+}

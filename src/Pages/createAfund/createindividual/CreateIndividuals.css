@@ -1,0 +1,278 @@
+.create_individuals {
+  background: url(../../../Assets/1670487957332.jpg);
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  object-fit: cover;
+  /* padding: 80px 100px; */
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  /* height: 100%; */
+}
+.create_individuals-left {
+  padding: 120px 50px 120px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* .create_individuals-left-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 150px;
+  z-index: 1;
+} */
+
+.create_individuals-left h5 {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #a9a9a9;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 120px;
+  z-index: 1;
+}
+.create_individuals-left h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  color: var(--color-white);
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  top: 152px;
+  z-index: 1;
+}
+.create_individuals-right {
+  background-color: var(--color-light);
+  padding: 120px 100px;
+}
+.create_individuals_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.create_individuals-set-Goals {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.create_individuals-set-Goals h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: var(--color-black);
+}
+
+.create_individuals-amount_field {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+}
+.create_individuals-amount_field:hover {
+  border-color: black; /* Change the border color to black on focus */
+}
+.create_individuals-amount_field small {
+  font-family: "Arimo", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52.8px;
+  color: var(--color-black);
+}
+
+.create_individuals-amount_field .create_individuals-amount-input {
+  width: 90%;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: "Arimo", sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 52.8px;
+  color: var(--color-black);
+  text-align: right;
+}
+.create_individuals-set-Goals p {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: var(--color-black);
+}
+.create_individuals-select-Payment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.create_individuals-select-Payment h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  color: var(--color-black);
+}
+
+.create_individuals-payment_radio {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.create_individuals-custom-radio {
+  font-family: "Arimo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #707070;
+  color: var(--color-black);
+  cursor: pointer;
+}
+.create_individuals-custom-radio:last-child {
+  border-bottom: unset;
+  padding-bottom: unset;
+}
+
+.create_individuals-custom-radio input[type="radio"] {
+  display: none;
+}
+.create_individuals-custom-radio span {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 3px solid #767676;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.create_individuals-custom-radio input[type="radio"]:checked ~ span {
+  border: 3px solid var(--color-bg);
+}
+
+.create_individuals-custom-radio span:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  background: var(--color-primary);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 12rem;
+  transition: 300ms ease-in-out 0s;
+}
+.create_individuals-custom-radio input[type="radio"]:checked ~ span:after {
+  transform: translate(-50%, -50%) scale(1);
+  background: var(--color-primary);
+}
+
+.create_individuals-input-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+.debitcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.mobilemoney {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.applepay {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.create_individuals-input-field {
+  border: 2px solid #cccccc;
+  border-radius: 16px;
+  padding: 14px 20px;
+  position: relative;
+}
+.create_individuals-input-field input {
+  width: 90%;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.6px;
+  color: #707070;
+  text-align: left;
+}
+.debitcards .Card {
+  flex: inherit;
+  width: 70%;
+}
+.debitcards .MM {
+  flex: inherit;
+  width: 15%;
+  padding: 14px 12px;
+  justify-content: center;
+  align-items: center;
+}
+.debitcards .CVV {
+  flex: 1;
+  width: 15%;
+  padding: 14px 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.debitcards .Cardholder {
+  flex-direction: column;
+  width: 100%;
+}
+
+.create_individuals-payment-logo {
+  display: flex;
+  gap: 8px;
+}
+.create_individuals-payment-logo img {
+  /* aspect-ratio: 1/1; */
+  object-fit: contain;
+  width: 50px;
+  height: 20x;
+}
+.create_individuals-radio-label-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create_individuals-payment-logo .voda {
+  width: 40px;
+}
+.create_individuals-payment-logo.applepay {
+  width: 70px;
+}
+.create_individuals-button {
+  display: flex;
+  justify-content: end;
+}
+.create_individuals-button .btn {
+  padding: 16px 24px;
+  font-size: 23px;
+}
