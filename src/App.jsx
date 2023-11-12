@@ -19,6 +19,7 @@ import UploadPic from "./Pages/createAfund/upload/UploadPic";
 import CreateDescription from "./Pages/createAfund/createdescription/CreateDescription";
 import CreateReview from "./Pages/createAfund/review/CreateReview";
 import SetLocation from "./Pages/setlocation/SetLocation";
+import PaymentOrganization from "./Pages/paymentMethodOrganization/PaymentOrganization";
 
 // import { AuthProvider } from "./Components/Authentication/AuthContext";
 // import { AuthRenderer } from "./Components/Authentication/AuthRenderer";
@@ -102,6 +103,7 @@ const App = () => {
         <Route path="createdescriptions" element={<CreateDescription />} />
         <Route path="reviews" element={<CreateReview />} />
         <Route path="locations" element={<SetLocation />} />
+        <Route path="paymentsorganization" element={<PaymentOrganization />} />
 
         {/* <Route path="createfundindividual" element={<CreateFundIndividual />} /> */}
 

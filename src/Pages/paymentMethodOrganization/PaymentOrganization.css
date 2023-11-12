@@ -1,30 +1,30 @@
-.create_individuals {
-  background: url(../../../Assets/1670487957332.jpg);
+.PaymentOrganizations {
+  background: url(../../Assets/1670487957332.jpg);
   /* background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
   object-fit: cover;
   /* padding: 80px 100px; */
   display: grid;
   grid-template-columns: 1.5fr 3fr;
   /* height: 100%; */
 }
-.create_individuals-left {
+.PaymentOrganizations-left {
   padding: 120px 50px 120px 100px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* .create_individuals-left-wrapper {
-  position: -webkit-sticky;
-  position: sticky;
-  display: flex;
-  top: 150px;
-  z-index: 1;
-} */
+/* .PaymentOrganizations-left-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    top: 150px;
+    z-index: 1;
+  } */
 
-.create_individuals-left h5 {
+.PaymentOrganizations-left h5 {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -36,7 +36,7 @@
   top: 120px;
   z-index: 1;
 }
-.create_individuals-left h2 {
+.PaymentOrganizations-left h2 {
   font-family: "Arimo", sans-serif;
   font-size: 35px;
   font-weight: 400;
@@ -48,21 +48,21 @@
   top: 152px;
   z-index: 1;
 }
-.create_individuals-right {
+.PaymentOrganizations-right {
   background-color: var(--color-light);
-  padding: 120px 100px;
+  padding: 170px 100px 40px 100px;
 }
-.create_individuals_form {
+.PaymentOrganizations_form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.create_individuals-set-Goals {
+.PaymentOrganizations-set-Goals {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.create_individuals-set-Goals h3 {
+.PaymentOrganizations-set-Goals h3 {
   font-family: "Arimo", sans-serif;
   font-size: 28px;
   font-weight: 400;
@@ -70,17 +70,17 @@
   color: var(--color-black);
 }
 
-.create_individuals-amount_field {
+.PaymentOrganizations-amount_field {
   border: 2px solid #cccccc;
   border-radius: 16px;
   padding: 24px;
   width: 100%;
   display: flex;
 }
-.create_individuals-amount_field:hover {
+.PaymentOrganizations-amount_field:hover {
   border-color: black; /* Change the border color to black on focus */
 }
-.create_individuals-amount_field small {
+.PaymentOrganizations-amount_field small {
   font-family: "Arimo", sans-serif;
   font-size: 44px;
   font-weight: 600;
@@ -88,7 +88,7 @@
   color: var(--color-black);
 }
 
-.create_individuals-amount_field .create_individuals-amount-input {
+.PaymentOrganizations-amount_field .PaymentOrganizations-amount-input {
   width: 90%;
   background: none;
   outline: none;
@@ -100,19 +100,19 @@
   color: var(--color-black);
   text-align: right;
 }
-.create_individuals-set-Goals p {
+.PaymentOrganizations-set-Goals p {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   color: var(--color-black);
 }
-.create_individuals-select-Payment {
+.PaymentOrganizations-select-Payment {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.create_individuals-select-Payment h3 {
+.PaymentOrganizations-select-Payment h3 {
   font-family: "Arimo", sans-serif;
   font-size: 28px;
   font-weight: 400;
@@ -120,7 +120,7 @@
   color: var(--color-black);
 }
 
-.create_individuals-payment_radio {
+.PaymentOrganizations-payment_radio {
   border: 2px solid #cccccc;
   border-radius: 16px;
   padding: 24px;
@@ -130,7 +130,7 @@
   gap: 24px;
 }
 
-.create_individuals-custom-radio {
+.PaymentOrganizations-custom-radio {
   font-family: "Arimo", sans-serif;
   font-size: 28px;
   font-weight: 400;
@@ -142,15 +142,15 @@
   color: var(--color-black);
   cursor: pointer;
 }
-.create_individuals-custom-radio:last-child {
+.PaymentOrganizations-custom-radio:last-child {
   border-bottom: unset;
   padding-bottom: unset;
 }
 
-.create_individuals-custom-radio input[type="radio"] {
+.PaymentOrganizations-custom-radio input[type="radio"] {
   display: none;
 }
-.create_individuals-custom-radio span {
+.PaymentOrganizations-custom-radio span {
   height: 34px;
   width: 34px;
   border-radius: 50%;
@@ -161,11 +161,11 @@
   top: 0;
 }
 
-.create_individuals-custom-radio input[type="radio"]:checked ~ span {
+.PaymentOrganizations-custom-radio input[type="radio"]:checked ~ span {
   border: 3px solid var(--color-bg);
 }
 
-.create_individuals-custom-radio span:after {
+.PaymentOrganizations-custom-radio span:after {
   content: "";
   display: block;
   width: 18px;
@@ -178,12 +178,12 @@
   border-radius: 12rem;
   transition: 300ms ease-in-out 0s;
 }
-.create_individuals-custom-radio input[type="radio"]:checked ~ span:after {
+.PaymentOrganizations-custom-radio input[type="radio"]:checked ~ span:after {
   transform: translate(-50%, -50%) scale(1);
   background: var(--color-primary);
 }
 
-.create_individuals-input-fields {
+.PaymentOrganizations-input-fields {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -205,13 +205,13 @@
   flex-direction: column;
   gap: 16px;
 }
-.create_individuals-input-field {
+.PaymentOrganizations-input-field {
   border: 2px solid #cccccc;
   border-radius: 16px;
   padding: 14px 20px;
   position: relative;
 }
-.create_individuals-input-field input {
+.PaymentOrganizations-input-field input {
   width: 90%;
   background: none;
   outline: none;
@@ -247,52 +247,79 @@
   width: 100%;
 }
 
-.create_individuals-payment-logo {
+.PaymentOrganizations-payment-logo {
   display: flex;
   gap: 8px;
 }
-.create_individuals-payment-logo img {
+.PaymentOrganizations-payment-logo img {
   /* aspect-ratio: 1/1; */
   object-fit: contain;
   width: 50px;
   height: 20x;
 }
-.create_individuals-radio-label-container {
+.PaymentOrganizations-radio-label-container {
   display: flex;
   justify-content: space-between;
 }
 
-.create_individuals-payment-logo .voda {
+.PaymentOrganizations-payment-logo .voda {
   width: 40px;
 }
-.create_individuals-payment-logo.applepay {
+.PaymentOrganizations-payment-logo.applepay {
   width: 70px;
 }
-.create_individuals-button {
+.PaymentOrganizations-button {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: end;
+  text-align: justify;
+  gap: 20px;
+  margin-top: 60px;
 }
-.create_individuals-button .btn {
+
+.PaymentOrganizations-button p {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #707070;
+}
+.PaymentOrganizations-button span {
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--color-black);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.PaymentOrganizations-button p span:hover {
+  color: var(--color-bg);
+}
+.PaymentOrganizations-button .btn {
   padding: 16px 24px;
   font-size: 23px;
+  display: flex;
+  justify-content: end;
 }
 
 /*Media Query for tablet (medium devices)*/
 @media screen and (max-width: 1024px) {
-  .create_individuals-left {
+  .PaymentOrganizations-left {
     padding: 100px 40px;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .create_individuals-right {
+  .PaymentOrganizations-right {
     padding: 100px 40px;
   }
 }
 
 /*Media Query for phone (small devices)*/
 @media screen and (max-width: 768px) {
-  .create_individuals {
+  .PaymentOrganizations {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -301,7 +328,7 @@
     display: flex;
     flex-direction: column;
   }
-  .create_individuals-left {
+  .PaymentOrganizations-left {
     padding: 70px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -309,62 +336,62 @@
     justify-content: center;
   }
 
-  .create_individuals-left h5 {
+  .PaymentOrganizations-left h5 {
     line-height: 21.6px;
     top: 75px;
   }
-  .create_individuals-left h2 {
+  .PaymentOrganizations-left h2 {
     font-size: 23px;
     line-height: 27.6px;
   }
-  .create_individuals-right {
+  .PaymentOrganizations-right {
     border-radius: 16px;
     padding: 40px 20px;
   }
-  .create_individuals_form {
+  .PaymentOrganizations_form {
     gap: 20px;
   }
-  .create_individuals-set-Goals {
+  .PaymentOrganizations-set-Goals {
     gap: 8px;
   }
-  .create_individuals-set-Goals h3 {
+  .PaymentOrganizations-set-Goals h3 {
     font-size: 23px;
     line-height: 27.6px;
   }
 
-  .create_individuals-amount_field {
+  .PaymentOrganizations-amount_field {
     padding: 19px 24px;
   }
-  .create_individuals-amount_field small {
+  .PaymentOrganizations-amount_field small {
     font-size: 23px;
     line-height: 27.6px;
     font-weight: 700;
   }
 
-  .create_individuals-amount_field .create_individuals-amount-input {
+  .PaymentOrganizations-amount_field .PaymentOrganizations-amount-input {
     width: 90%;
     font-size: 23px;
     font-weight: 700;
     line-height: 27.6px;
   }
-  .create_individuals-set-Goals p {
+  .PaymentOrganizations-set-Goals p {
     font-size: 14px;
     line-height: 16.8px;
   }
-  .create_individuals-select-Payment {
+  .PaymentOrganizations-select-Payment {
     gap: 8px;
   }
-  .create_individuals-select-Payment h3 {
+  .PaymentOrganizations-select-Payment h3 {
     font-size: 22px;
     line-height: 27.6px;
   }
 
-  .create_individuals-payment_radio {
+  .PaymentOrganizations-payment_radio {
     padding: 18px;
     gap: 16px;
   }
 
-  .create_individuals-custom-radio {
+  .PaymentOrganizations-custom-radio {
     font-size: 18px;
     line-height: 21.6px;
     padding-left: 30px;
@@ -372,17 +399,17 @@
     justify-content: center;
   }
 
-  .create_individuals-custom-radio span {
+  .PaymentOrganizations-custom-radio span {
     height: 24px;
     width: 24px;
   }
 
-  .create_individuals-custom-radio span:after {
+  .PaymentOrganizations-custom-radio span:after {
     width: 11.5px;
     height: 11.5px;
   }
 
-  .create_individuals-input-fields {
+  .PaymentOrganizations-input-fields {
     gap: 10px;
     margin-top: 8px;
   }
@@ -397,7 +424,7 @@
   .applepay {
     gap: 8px;
   }
-  .create_individuals-input-field {
+  .PaymentOrganizations-input-field {
     padding: 10px 12px;
   }
 
@@ -421,23 +448,35 @@
     width: 100%;
   }
 
-  .create_individuals-payment-logo {
+  .PaymentOrganizations-payment-logo {
     display: flex;
     gap: 8px;
   }
-  .create_individuals-payment-logo img {
+  .PaymentOrganizations-payment-logo img {
     width: 40px;
   }
 
-  .create_individuals-payment-logo .voda {
+  .PaymentOrganizations-payment-logo .voda {
     width: 30px;
   }
-  .create_individuals-payment-logo.applepay {
+  .PaymentOrganizations-payment-logo.applepay {
     width: 55px;
   }
-  .create_individuals-button .btn {
+  .PaymentOrganizations-button .btn {
     padding: 12px 20px;
     font-size: 20px;
     margin-top: 40px;
+  }
+  .PaymentOrganizations-button {
+    margin-top: 100px;
+  }
+
+  .PaymentOrganizations-button p {
+    font-size: 14px;
+    line-height: 14.4px;
+  }
+  .PaymentOrganizations-button span {
+    font-size: 12px;
+    line-height: 14.4px;
   }
 }

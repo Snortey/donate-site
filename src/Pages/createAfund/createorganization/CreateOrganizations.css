@@ -115,3 +115,88 @@
   padding: 16px 24px;
   font-size: 23px;
 }
+
+/*Media Query for tablet (medium devices)*/
+@media screen and (max-width: 1024px) {
+  .create_organizations-left {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .create_organizations-right {
+    padding: 100px 40px;
+  }
+}
+
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 768px) {
+  .create_organizations {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    /* padding: 70px 20px; */
+    display: flex;
+    flex-direction: column;
+  }
+  .create_organizations-left {
+    padding: 70px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .create_organizations-left h5 {
+    top: 75px;
+    z-index: 1;
+  }
+  .create_organizations-left h2 {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+  .create_organizations-right {
+    border-radius: 16px;
+    padding: 40px 20px;
+  }
+  .create_organizations_form {
+    gap: 20px;
+  }
+  .create_organizations-set-Goals {
+    gap: 8px;
+  }
+  .create_organizations-set-Goals h3 {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+
+  .create_organizations-amount_field {
+    padding: 16px 24px;
+  }
+
+  .create_organizations-amount_field small {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27.6px;
+  }
+
+  .create_organizations-amount_field .create_organizations-amount-input {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27.6px;
+  }
+  .create_organizations-set-Goals p {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+
+  .create_organizations-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 240px;
+  }
+  .create_organizations-button .btn {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+}

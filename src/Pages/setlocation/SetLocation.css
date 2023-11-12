@@ -16,7 +16,7 @@
   gap: 10px;
 }
 
-.location-left h5 {
+.location-left h2 {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -158,4 +158,99 @@
   border-radius: 120px;
   color: var(--color-white);
   background-color: var(--color-black);
+}
+
+/*Media Query for tablet (medium devices)*/
+@media screen and (max-width: 1024px) {
+  .location-left {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .location-right {
+    padding: 100px 40px;
+  }
+}
+
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 768px) {
+  .location {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    /* padding: 70px 20px; */
+    display: flex;
+    flex-direction: column;
+  }
+  .location-left {
+    padding: 70px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .location_form {
+    gap: 40px;
+  }
+  .loca_home {
+    font-family: "Arimo", sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 52.8px;
+    top: 80px;
+    z-index: 100;
+  }
+
+  .location-left h2 {
+    font-size: 20px;
+    line-height: 24.6px;
+  }
+  .location-right {
+    border-radius: 16px;
+    padding: 40px 20px;
+  }
+  .upload_location-button {
+    margin-top: 60px;
+  }
+  .upload_location-button .btn {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+  .location_form-header {
+    gap: 8px;
+  }
+  .location_form-footer {
+    gap: 8px;
+  }
+  .location_form-header h2 {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+  .location_form-footer h2 {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+
+  .location_form-header-feild {
+    padding: 19px 24px;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .set_location-icon {
+    font-size: 25px;
+  }
+
+  .location_category-filter-items {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .location_category-filter-items li {
+    padding: 8px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.6px;
+  }
 }

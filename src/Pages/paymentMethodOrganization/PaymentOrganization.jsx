@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./CreateIndividuals.css";
-import visa from "../../../Assets/logos/visa logo colored.png";
-import mastercard from "../../../Assets/logos/mastercard logo colored.png";
-import vodafone from "../../../Assets/logos/vodafone logo.png";
-import MTN from "../../../Assets/logos/mtnlogo yellow.png";
-import apple from "../../../Assets/logos/applepay logo.png";
 import { Link } from "react-router-dom";
+import "./PaymentOrganization.css";
+import visa from "../../Assets/logos/visa logo colored.png";
+import mastercard from "../../Assets/logos/mastercard logo colored.png";
+import vodafone from "../../Assets/logos/vodafone logo.png";
+import MTN from "../../Assets/logos/mtnlogo yellow.png";
+import apple from "../../Assets/logos/applepay logo.png";
 
 const paymentOptiondata = [
   {
@@ -58,8 +58,7 @@ const paymentOptiondata = [
   },
 ];
 
-const CreateIndividuals = () => {
-  const [validAmount, setValidAmount] = useState("");
+const PaymentOrganization = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [inputFields, setInputFields] = useState([]);
   const [selectedLogo, setSelectedLogo] = useState(null);
@@ -95,50 +94,27 @@ const CreateIndividuals = () => {
     });
   };
   return (
-    <section className="create_individuals">
-      <div className="create_individuals-left">
-        <h5>Set your Goal</h5>
-        <h2>How much would you like to raise?</h2>
+    <section className="PaymentOrganizations">
+      <div className="PaymentOrganizations-left">
+        <h5>Almost there</h5>
+        <h2>Set your organization’s payment account</h2>
       </div>
 
-      <div className="create_individuals-right">
+      <div className="PaymentOrganizations-right">
         <form
           action=""
-          className="create_individuals_form"
+          className="PaymentOrganizations_form"
           onClick={(event) => event.stopPropagation()}
         >
-          <div className="create_individuals-set-Goals">
-            <h3>Set your goal</h3>
-            <div className="create_individuals-amount_field">
-              <small>GHS</small>
-              <input
-                type="text"
-                placeholder="5.00"
-                value={validAmount}
-                onClick={(event) => event.stopPropagation()}
-                onInput={(event) => {
-                  const inputValue = event.target.value;
-                  // Use a regular expression to keep only numeric values and a single period
-                  const numericInput = inputValue.replace(/[^0-9.]/g, "");
-                  setValidAmount(numericInput);
-                }}
-                className="create_individuals-amount-input"
-              />
-            </div>
-            <p>
-              Please note that transaction fees, taxes and all other charges are
-              deducted from each donation.
-            </p>
-          </div>
-          <div className="create_individuals-select-Payment">
-            <h3>Select your mode of receiving payment</h3>
+          <div className="PaymentOrganizations-select-Payment">
+            <h3>Select your organizations mode of receiving payment</h3>
             <div
-              className="create_individuals-payment_radio"
+              className="PaymentOrganizations-payment_radio"
               onClick={(event) => event.stopPropagation()}
             >
               {paymentOptiondata.map(({ id, actualname, name, valuetype }) => (
-                <label key={id} className="create_individuals-custom-radio">
-                  <div className="create_individuals-radio-label-container">
+                <label key={id} className="PaymentOrganizations-custom-radio">
+                  <div className="PaymentOrganizations-radio-label-container">
                     <input
                       id={id}
                       type="radio"
@@ -148,22 +124,22 @@ const CreateIndividuals = () => {
                       checked={selectedOption === valuetype}
                       onChange={handleOptionChange}
                     />
-                    <span className="create_individuals-radio-button"></span>
+                    <span className="PaymentOrganizations-radio-button"></span>
                     {actualname}
                     {selectedOption === valuetype && (
-                      <div className="create_individuals-payment-logo">
+                      <div className="PaymentOrganizations-payment-logo">
                         {selectedLogo}
                       </div>
                     )}
                   </div>
                   {/* Conditionally render input fields */}
-                  <div className="create_individuals-input-fields">
+                  <div className="PaymentOrganizations-input-fields">
                     {selectedOption === valuetype && (
                       <div className={valuetype}>
                         {inputFields.map((field, index) => (
                           <div
                             key={index}
-                            className={`create_individuals-input-field ${field.placeholder}`}
+                            className={`PaymentOrganizations-input-field ${field.placeholder}`}
                           >
                             {field.type === "checkbox" ? (
                               <input type="checkbox" />
@@ -171,7 +147,7 @@ const CreateIndividuals = () => {
                               <input
                                 type={field.type}
                                 placeholder={field.placeholder}
-                                className="create_individuals-custom-input"
+                                className="PaymentOrganizations-custom-input"
                                 onClick={(event) => event.stopPropagation()}
                                 onKeyDown={(event) => {
                                   if (
@@ -221,8 +197,13 @@ const CreateIndividuals = () => {
               ))}
             </div>
           </div>
-          <div className="create_individuals-button">
-            <Link to={"/uploadpic"} className="btn btn-primary">
+          <div className="PaymentOrganizations-button">
+            <p>
+              By clicking on complete, you agree to our{" "}
+              <span>Terms and Conditions</span> and{" "}
+              <span>Privacy Policies</span> .
+            </p>
+            <Link to={"/"} className="btn btn-primary">
               Continue
             </Link>
           </div>
@@ -232,4 +213,4 @@ const CreateIndividuals = () => {
   );
 };
 
-export default CreateIndividuals;
+export default PaymentOrganization;

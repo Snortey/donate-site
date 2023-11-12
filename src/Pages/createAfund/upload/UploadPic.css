@@ -133,3 +133,85 @@
 .upload_pic-main-space:hover {
   background-color: var(--color-white);
 }
+
+/*Media Query for tablet (medium devices)*/
+@media screen and (max-width: 1024px) {
+  .upload_pic-left {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .upload_pic-right {
+    background-color: var(--color-light);
+    padding: 100px 40px;
+  }
+}
+
+/*Media Query for phone (small devices)*/
+@media screen and (max-width: 768px) {
+  .upload_pic {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    /* padding: 70px 20px; */
+    display: flex;
+    flex-direction: column;
+  }
+  .upload_pic-left {
+    padding: 70px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .upload_pic-left h5 {
+    line-height: 21.6px;
+    top: 75px;
+  }
+  .upload_pic-left h2 {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+  .upload_pic-right {
+    width: 100%;
+    border-radius: 16px;
+    padding: 40px 20px;
+  }
+  .upload_pic_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .upload_pic-header {
+    gap: 8px;
+  }
+  .upload_pic-header h3 {
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+
+  .upload_pic-button {
+    margin-top: 80px;
+  }
+  .upload_pic-button .btn {
+    padding: 12px 20px;
+    font-size: 20px;
+  }
+
+  .upload_pic-main-space {
+    height: 300px;
+  }
+
+  .upload_icon {
+    font-size: 40px;
+  }
+
+  .upload_info {
+    font-size: 14px;
+    line-height: 16.8px;
+    text-align: center;
+  }
+}

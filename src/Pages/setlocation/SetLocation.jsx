@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./SetLocation.css";
 import { Link } from "react-router-dom";
 import { GrMapLocation } from "react-icons/gr";
@@ -36,8 +36,6 @@ const SetLocation = () => {
                 type="text"
                 placeholder="Location"
                 className="location-title"
-                // value={title}
-                // onChange={handleTitleChange}
               />
               <GrMapLocation className="set_location-icon" />
             </div>
@@ -146,7 +144,7 @@ const SetLocation = () => {
             </div>
           </div>
           <div className="upload_location-button">
-            <Link to={"/"} className="btn btn-primary">
+            <Link to={"/paymentsorganization"} className="btn btn-primary">
               Continue
             </Link>
           </div>
